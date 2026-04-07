@@ -1,0 +1,179 @@
+<!--HTML admin interface-->
+<!--ash edited-->
+
+<body>
+  <div class="box">
+    <!--Need to add UMBC header-->
+    <h1>Drop-In Tutor Check-In System</h1>
+
+    <!--Late, active, upcoming, and cancelled section boxes-->
+    <div class="section">
+      <div class="section-title late">Late Shifts</div>
+      <table>
+        <!--Title header-->
+        <tr>
+          <th>Name</th>
+          <th>Start Time</th>
+          <th>End Time</th>
+          <th>Course</th>
+          <th>Status</th>
+        </tr>
+        <!--Data-->
+        <tr>
+          <td>NAME</td>
+          <td>START TIME</td>
+          <td>END TIME</td>
+          <td>COURSE NAME</td>
+          <td>Late</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="section">
+      <div class="section-title active">Active Shifts</div>
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Start Time</th>
+          <th>End Time</th>
+          <th>Course</th>
+          <th>Status</th>
+        </tr>
+        <!--For status open (purple)-->
+        <tr>
+          <td>NAME</td>
+          <td>START TIME</td>
+          <td>END TIME</td>
+          <td>COURSE NAME</td>
+          <td class="status-open">Open</td>
+        </tr>
+        <!--TFor status full (blue)-->
+        <tr>
+          <td>NAME</td>
+          <td>START TIME</td>
+          <td>END TIME</td>
+          <td>COURSE NAME</td>
+          <td class="status-full">Full</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="section">
+      <div class="section-title upcoming">Upcoming Shifts</div>
+      <table>
+        <!--Title header-->
+        <tr>
+          <th>Name</th>
+          <th>Start Time</th>
+          <th>End Time</th>
+          <th>Course</th>
+          <th>Status</th>
+        </tr>
+        <!--Data-->
+        <tr>
+          <td>NAME</td>
+          <td>START TIME</td>
+          <td>END TIME</td>
+          <td>COURSE NAME</td>
+          <td>None</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="section">
+      <div class="section-title cancelled">Cancelled Shifts</div>
+      <table>
+        <!--Title header-->
+        <tr>
+          <th>Name</th>
+          <th>Start Time</th>
+          <th>End Time</th>
+          <th>Course</th>
+          <th>Status</th>
+        </tr>
+        <!--Data-->
+        <tr>
+          <td>NAME</td>
+          <td>START TIME</td>
+          <td>END TIME</td>
+          <td>COURSE NAME</td>
+          <td>Absent</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</body>
+
+<style>
+  body {
+    background-color: gray;
+  }
+
+  .box {
+    background-color: white;
+    text-align: center;
+    width: 83%;
+    margin: 40px auto;
+    border-radius: 10px;
+    padding: 35px;
+  }
+
+  .section {
+    margin-bottom: 25px;
+    border-radius: 10px;
+    border: 1.6px solid black;
+    overflow: hidden;
+  }
+
+  .section-title {
+    padding: 7px;
+    text-align: left;
+    font-weight: bold;
+  }
+
+  /*Colors for section titles*/
+  .late {
+    background-color: #ffd580;
+  }
+  .active {
+    background-color: #90ee90;
+  }
+  .upcoming {
+    background-color: #9f9797;
+  }
+  .cancelled {
+    background-color: #da7877;
+  }
+
+  h1 {
+    text-align: left;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+  }
+
+  th {
+    width: 20%;
+    padding: 5px;
+    text-align: center;
+  }
+
+  td {
+    width: 20%;
+    padding: 4px;
+    text-align: center;
+  }
+
+  /*For the active section; Full cap: blue and Accepting: purple*/
+  .status-full {
+    background-color: #add8e6;
+    padding: 4px;
+  }
+  .status-open {
+    background-color: #cbc3e3;
+    padding: 4px;
+  }
+</style>
