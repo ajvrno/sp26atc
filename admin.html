@@ -24,7 +24,16 @@
           <td>START TIME</td>
           <td>END TIME</td>
           <td>COURSE NAME</td>
-          <td>Late</td>
+          <td>
+            <select>
+              <option value="None">None</option>
+              <option value="Open" class="status-open">Open</option>
+              <option value="Full">Full</option>
+              <option value="Cancelled">Cancelled</option>
+              <option value="Absent">Absent</option>
+              <option value="Late" class="status-late">Late</option>
+            </select>
+          </td>
         </tr>
       </table>
     </div>
@@ -45,7 +54,16 @@
           <td>START TIME</td>
           <td>END TIME</td>
           <td>COURSE NAME</td>
-          <td class="status-open">Open</td>
+          <td>
+            <select>
+              <option value="None">None</option>
+              <option value="Open" class="status-open">Open</option>
+              <option value="Full">Full</option>
+              <option value="Cancelled">Cancelled</option>
+              <option value="Absent">Absent</option>
+              <option value="Late" class="status-full">Late</option>
+            </select>
+          </td>
         </tr>
         <!--TFor status full (blue)-->
         <tr>
@@ -53,7 +71,16 @@
           <td>START TIME</td>
           <td>END TIME</td>
           <td>COURSE NAME</td>
-          <td class="status-full">Full</td>
+          <td>
+            <select>
+              <option value="None">None</option>
+              <option value="Open" class="status-open">Open</option>
+              <option value="Full">Full</option>
+              <option value="Cancelled">Cancelled</option>
+              <option value="Absent">Absent</option>
+              <option value="Late" class="status-full">Late</option>
+            </select>
+          </td>
         </tr>
       </table>
     </div>
@@ -75,7 +102,16 @@
           <td>START TIME</td>
           <td>END TIME</td>
           <td>COURSE NAME</td>
-          <td>None</td>
+          <td>
+            <select>
+              <option value="None">None</option>
+              <option value="Open" class="status-open">Open</option>
+              <option value="Full">Full</option>
+              <option value="Cancelled">Cancelled</option>
+              <option value="Absent">Absent</option>
+              <option value="Late" class="status-full">Late</option>
+            </select>
+          </td>
         </tr>
       </table>
     </div>
@@ -97,7 +133,16 @@
           <td>START TIME</td>
           <td>END TIME</td>
           <td>COURSE NAME</td>
-          <td>Absent</td>
+          <td>
+            <select>
+              <option value="None">None</option>
+              <option value="Open" class="status-open">Open</option>
+              <option value="Full">Full</option>
+              <option value="Cancelled">Cancelled</option>
+              <option value="Absent">Absent</option>
+              <option value="Late" class="status-full">Late</option>
+            </select>
+          </td>
         </tr>
       </table>
     </div>
@@ -110,11 +155,10 @@
   * {
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
-    font-weight: <weight>;
     font-style: normal;
   }
   body {
-    background-color: gray;
+    background-color: rgb(182, 182, 182);
   }
 
   .box {
