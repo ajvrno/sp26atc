@@ -1,5 +1,5 @@
 <!--HTML admin interface-->
-<!--ash edited-->
+<!--Chloe edited, updated the drop down for specific sections-->
 
 <body>
   <div class="box">
@@ -27,11 +27,8 @@
           <td>
             <select>
               <option value="None">None</option>
-              <option value="Open" class="status-open">Open</option>
-              <option value="Full">Full</option>
+              <option value="Active">Active</option>
               <option value="Cancelled">Cancelled</option>
-              <option value="Absent">Absent</option>
-              <option value="Late" class="status-late">Late</option>
             </select>
           </td>
         </tr>
@@ -56,16 +53,12 @@
           <td>COURSE NAME</td>
           <td>
             <select>
-              <option value="None">None</option>
               <option value="Open" class="status-open">Open</option>
               <option value="Full">Full</option>
-              <option value="Cancelled">Cancelled</option>
-              <option value="Absent">Absent</option>
-              <option value="Late" class="status-full">Late</option>
             </select>
           </td>
         </tr>
-        <!--TFor status full (blue)-->
+        <!--For status full (blue)-->
         <tr>
           <td>NAME</td>
           <td>START TIME</td>
@@ -73,12 +66,8 @@
           <td>COURSE NAME</td>
           <td>
             <select>
-              <option value="None">None</option>
               <option value="Open" class="status-open">Open</option>
               <option value="Full">Full</option>
-              <option value="Cancelled">Cancelled</option>
-              <option value="Absent">Absent</option>
-              <option value="Late" class="status-full">Late</option>
             </select>
           </td>
         </tr>
@@ -105,17 +94,13 @@
           <td>
             <select>
               <option value="None">None</option>
-              <option value="Open" class="status-open">Open</option>
-              <option value="Full">Full</option>
               <option value="Cancelled">Cancelled</option>
-              <option value="Absent">Absent</option>
-              <option value="Late" class="status-full">Late</option>
             </select>
           </td>
         </tr>
       </table>
     </div>
-
+    
     <div class="section">
       <div class="section-title cancelled">Cancelled Shifts</div>
       <table>
@@ -135,14 +120,31 @@
           <td>COURSE NAME</td>
           <td>
             <select>
-              <option value="None">None</option>
-              <option value="Open" class="status-open">Open</option>
-              <option value="Full">Full</option>
               <option value="Cancelled">Cancelled</option>
-              <option value="Absent">Absent</option>
-              <option value="Late" class="status-full">Late</option>
+              <option value="Active">Active</option>
             </select>
           </td>
+        </tr>
+      </table>
+    </div>
+
+    <!--Completed Shifts section-->
+    <div class="section">
+      <div class="section-title completed">Completed Shifts</div>
+      <table>
+        <!--Title header-->
+        <tr>
+          <th>Name</th>
+          <th>Start Time</th>
+          <th>End Time</th>
+          <th>Course</th>
+        </tr>
+        <!--Data-->
+        <tr>
+          <td>NAME</td>
+          <td>START TIME</td>
+          <td>END TIME</td>
+          <td>COURSE NAME</td>
         </tr>
       </table>
     </div>
@@ -196,6 +198,10 @@
   .cancelled {
     background-color: #da7877;
   }
+  .completed{
+    background-color: violet;
+  }
+
 
   h1 {
     text-align: left;
