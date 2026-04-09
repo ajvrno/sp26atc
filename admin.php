@@ -1,16 +1,14 @@
-// Ashley - ignore for now, this is to get the login to show first but i think i'll save this for sprint 3
-
 <?php
 // Checks if the user is logged in before opening admin page
 session_start();
 
-if (!isset($_SESSION['user_id'])) {
+if (!isset($_SESSION['admin_id'])) {
 
-    header("Location: log_in.php");
+    header("Location: index.php");
     exit();
 }
 
-$db = mysqli_connect("localhost", "username", "password", "dbname");
+require_once 'db_config.php';
 
 if (mysqli_connect_errno()) {
     exit("Error - could not connect to MySQL: " . mysqli_connect_error());
