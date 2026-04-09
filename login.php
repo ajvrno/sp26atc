@@ -3,6 +3,12 @@
 
 session_start();
 
+// Redirect already logged in users to the dashboard
+if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
+    header("Location: dashboard.php");
+    exit;
+}
+
 $db = mysqli_connect('dbname');
 
 if (mysqli_connect_errno()) {
