@@ -1,5 +1,5 @@
 <?php
-// Ashley Rabino - Login Page
+// Ashley Rabino - Login Page for ASC Drop-in Tutoring Admin Interface
 
 session_start();
 
@@ -12,6 +12,7 @@ if (mysqli_connect_errno()) {
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $user = htmlspecialchars($_POST['email']);
     $pass = htmlspecialchars($_POST['pass']);
+    $hashed_password = password_hash($pass, PASSWORD_DEFAULT);
 
     // Retrieve user using prepared statement
     $stmt = mysqli_prepare($db, "SELECT admin_id, email, pass FROM admins WHERE email = ?");
@@ -51,7 +52,7 @@ mysqli_close($db);
 
 <head>
     <meta charset="UTF-8">
-    <title>Log In</title>
+    <title>ASC Tutor Management</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,600;1,600&family=Quicksand:wght@300..700&display=swap');
 

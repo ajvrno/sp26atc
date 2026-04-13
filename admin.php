@@ -1,4 +1,5 @@
 <?php
+// Ashley Rabino - PHP Script for ASC Drop-in Tutoring Admin Interface
 // Checks if the user is logged in before opening admin page
 session_start();
 
