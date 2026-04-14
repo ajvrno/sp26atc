@@ -1,5 +1,6 @@
-<!--HTML admin interface-->
-<!--Chloe edited, updated the drop down for specific sections-->
+<!--HTML Admin Interface-->
+<!--Kirsten Chloe Leosala - HTML for the Admin Interface-->
+<!--Chloe: Added the date arrows, feedback form, and active changing to open and full to proper color-->
 
 <!doctype html>
 <html lang="en">
@@ -35,6 +36,35 @@
         height: 100%;
         object-position: center;
         display: block;
+      }
+
+      /*Container for the date arrows and the student feedback*/
+      .arrow-feedback-container {
+        display: flex;
+        position: relative;
+        align-items: center;
+        margin-bottom: 15px;
+      }
+
+      .feedback-button {
+        position: absolute;
+        right: 0;
+        color: black;
+        border: black solid 1.5px;
+        border-radius: 5px;
+        padding: 8px 10px;
+        cursor: pointer;
+      }
+
+      .date-button {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        margin: 0 auto;
+      }
+
+      .arrow-button {
+        cursor: pointer;
       }
 
       .box {
@@ -114,11 +144,23 @@
     <div class="header-banner">
       <img src="data/UMBC header.png" alt="UMBC Academic Success Center" />
     </div>
+
     <div class="box">
       <h1>Drop-In Tutor Check-In System</h1>
+
+      <div class="arrow-feedback-container">
+        <div class="date-button">
+          <button class="arrow-button" onclick="changeDate(-1)">&larr;</button>
+          <span>DATE</span>
+          <button class="arrow-button" onclick="changeDate(1)">&rarr;</button>
+        </div>
+        <button class="feedback-button">Access Feedback</button>
+      </div>
+
       <div id="root"></div>
     </div>
 
+    <!--Shifting of status implementation-->
     <script type="text/babel">
       const { useState } = React;
 
@@ -293,7 +335,13 @@
                             </td>
                           )}
                           {isActive && (
-                            <td>
+                            <td
+                              className={
+                                t.availability === "Full"
+                                  ? "status-full"
+                                  : "status-open"
+                              }
+                            >
                               <select
                                 value={t.availability}
                                 onChange={(e) =>
