@@ -31,7 +31,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['email'] = $email;
 
 
-            header("Location: src/admin.php");
+            header("Location: admin.php");
 
             exit();
 
@@ -167,7 +167,7 @@ mysqli_close($db);
         <img src="data/UMBC-vertical-logo-RGB-665x1024.png" alt="UMBC Logo" style="width: 100px; height: auto;">
         <h1>Log In</h1>
 
-        <form id="form" action="index.php" method="post">
+        <form id="form" action="login.php" method="post">
             <label for="email">Email</label><br>
             <input type="text" name="email" required><br>
             <label for="pass">Password</label><br>
