@@ -5,14 +5,14 @@ session_start();
 
 if (!isset($_SESSION['admin_id'])) {
 
-    header("Location: login.php");
-    exit();
+  header("Location: login.php");
+  exit();
 }
 
 require_once 'db_config.php';
 
 if (mysqli_connect_errno()) {
-    exit("Error - could not connect to MySQL: " . mysqli_connect_error());
+  exit("Error - could not connect to MySQL: " . mysqli_connect_error());
 }
 
 ?>
@@ -21,681 +21,377 @@ if (mysqli_connect_errno()) {
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <title>ASC Tutor Management</title>
-    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
-    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <meta charset="UTF-8" />
+  <title>ASC Tutor Management</title>
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
-    <style>
-        @import url("https://fonts.googleapis.com/css2?family=Bungee+Spice&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,600;1,600&family=Quicksand:wght@300..700&display=swap");
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Bungee+Spice&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,600;1,600&family=Quicksand:wght@300..700&display=swap");
 
-        * {
-            font-family: "Inter", sans-serif;
-            font-optical-sizing: auto;
-            font-style: normal;
-        }
+    * {
+      font-family: "Inter", sans-serif;
+      font-optical-sizing: auto;
+      font-style: normal;
+    }
 
-        body {
-            background-color: rgb(182, 182, 182);
-            margin: 0;
-        }
+    body {
+      background-color: rgb(182, 182, 182);
+      margin: 0;
+    }
 
-        .header-banner {
-            width: 100%;
-            height: 260px;
-            overflow: hidden;
-        }
+    .header-banner {
+      width: 100%;
+      height: 260px;
+      overflow: hidden;
+    }
 
-        .header-banner img {
-            object-fit: cover;
-            width: 100%;
-            height: 100%;
-            object-position: center;
-            display: block;
-        }
+    .header-banner img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      object-position: center;
+      display: block;
+    }
 
-        .box {
-            background-color: white;
-            text-align: center;
-            width: 83%;
-            margin: 40px auto;
-            margin-top: -10px;
-            border-radius: 10px;
-            padding: 35px;
-        }
+    /*Container for the date arrows and the student feedback*/
+    .arrow-feedback-container {
+      display: flex;
+      position: relative;
+      align-items: center;
+      margin-bottom: 15px;
+    }
 
-        .section {
-            margin-bottom: 25px;
-            border-radius: 10px;
-            border: 1.6px solid black;
-            overflow: hidden;
-        }
+    .feedback-button {
+      position: absolute;
+      right: 0;
+      color: black;
+      border: black solid 1.5px;
+      border-radius: 5px;
+      padding: 8px 10px;
+      cursor: pointer;
+    }
 
-        .section-title {
-            padding: 7px;
-            text-align: left;
-            font-weight: bold;
-        }
+    .date-button {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      margin: 0 auto;
+    }
 
-        /*Colors for section titles*/
-        .late {
-            background-color: #ffd580;
-        }
+    .arrow-button {
+      cursor: pointer;
+    }
 
-        .active {
-            background-color: #90ee90;
-        }
+    .box {
+      background-color: white;
+      text-align: center;
+      width: 83%;
+      margin: 40px auto;
+      margin-top: -10px;
+      border-radius: 10px;
+      padding: 35px;
+    }
 
-        .upcoming {
-            background-color: #9f9797;
-        }
+    .section {
+      margin-bottom: 25px;
+      border-radius: 10px;
+      border: 1.6px solid black;
+      overflow: hidden;
+    }
 
-        .cancelled {
-            background-color: #da7877;
-        }
+    .section-title {
+      padding: 7px;
+      text-align: left;
+      font-weight: bold;
+    }
 
-        .completed {
-            background-color: violet;
-        }
+    /*Colors for section titles*/
+    .late {
+      background-color: #ffd580;
+    }
 
-        h1 {
-            text-align: left;
-        }
+    .active {
+      background-color: #90ee90;
+    }
 
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            background-color: white;
-        }
+    .upcoming {
+      background-color: #9f9797;
+    }
 
-        th {
-            width: 20%;
-            padding: 5px;
-            text-align: center;
-        }
+    .cancelled {
+      background-color: #da7877;
+    }
 
-        td {
-            width: 20%;
-            padding: 4px;
-            text-align: center;
-        }
+    .completed {
+      background-color: violet;
+    }
 
-        /*For the active section; Full cap: blue and Accepting: purple*/
-        .status-full {
-            background-color: #add8e6;
-            padding: 4px;
-        }
+    h1 {
+      text-align: left;
+    }
 
-        .status-open {
-            background-color: #cbc3e3;
-            padding: 4px;
-        }
-    </style>
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: white;
+    }
+
+    th {
+      width: 20%;
+      padding: 5px;
+      text-align: center;
+    }
+
+    td {
+      width: 20%;
+      padding: 4px;
+      text-align: center;
+    }
+
+    /*For the active section; Full cap: blue and Accepting: purple*/
+    .status-full {
+      background-color: #add8e6;
+      padding: 4px;
+    }
+
+    .status-open {
+      background-color: #cbc3e3;
+      padding: 4px;
+    }
+  </style>
 </head>
 
 <body>
-    <div class="header-banner">
-        <img src="UMBC header.png" alt="UMBC Academic Success Center" />
+  <div class="header-banner">
+    <img src="data/UMBC header.png" alt="UMBC Academic Success Center" />
+  </div>
+
+  <div class="box">
+    <h1>Drop-In Tutor Check-In System</h1>
+
+    <div class="arrow-feedback-container">
+      <div class="date-button">
+        <button class="arrow-button" onclick="changeDate(-1)">&larr;</button>
+        <span>DATE</span>
+        <button class="arrow-button" onclick="changeDate(1)">&rarr;</button>
+      </div>
+      <button class="feedback-button">Access Feedback</button>
     </div>
-    <div class="box">
-        <!--Need to add UMBC header-->
-        <h1>Drop-In Tutor Check-In System</h1>
-        <div id="root"></div>
-    </div>
 
-    <script type="text/babel">
-        const { useState } = React;
+    <div id="root"></div>
+  </div>
 
-        const SECTIONS = ["late", "active", "upcoming", "cancelled", "completed"];
+  <!--Shifting of status implementation-->
+  <script type="text/babel">
+    const { useState } = React;
 
-        const sectionLabel = {
-            late: "Late Shifts",
-            active: "Active Shifts",
-            upcoming: "Upcoming Shifts",
-            cancelled: "Cancelled Shifts",
-            completed: "Completed Shifts",
-        };
+    const SECTIONS = ["late", "active", "upcoming", "cancelled", "completed"];
 
-        // here is where the status options per section are determined
-        const STATUS_OPTIONS = {
-            late: ["Late", "Active", "Cancelled"],
-            active: ["Active", "Cancelled"],
-            upcoming: ["Upcoming", "Active", "Late", "Cancelled"],
-            cancelled: ["Cancelled", "Active"],
-            completed: [],
-        };
+    const sectionLabel = {
+      late: "Late Shifts",
+      active: "Active Shifts",
+      upcoming: "Upcoming Shifts",
+      cancelled: "Cancelled Shifts",
+      completed: "Completed Shifts",
+    };
 
-        // and here is here tutors are currently filled in
-        const currentTutors = [
-            {
-                id: 1,
-                name: "NAME",
-                start: "START TIME",
-                end: "END TIME",
-                course: "COURSE",
-                section: "upcoming",
-                availability: "Open",
-            },
-            {
-                id: 2,
-                name: "NAME",
-                start: "START TIME",
-                end: "END TIME",
-                course: "COURSE",
-                section: "upcoming",
-                availability: "Open",
-            },
-            {
-                id: 3,
-                name: "NAME",
-                start: "START TIME",
-                end: "END TIME",
-                course: "COURSE",
-                section: "upcoming",
-                availability: "Open",
-            },
-            {
-                id: 4,
-                name: "NAME",
-                start: "START TIME",
-                end: "END TIME",
-                course: "COURSE",
-                section: "upcoming",
-                availability: "Open",
-            },
-            {
-                id: 5,
-                name: "NAME",
-                start: "START TIME",
-                end: "END TIME",
-                course: "COURSE",
-                section: "completed",
-                availability: "Open",
-            },
-            {
-                id: 6,
-                name: "NAME",
-                start: "START TIME",
-                end: "END TIME",
-                course: "COURSE",
-                section: "completed",
-                availability: "Open",
-            },
-        ];
+    // here is where the status options per section are determined
+    const STATUS_OPTIONS = {
+      late: ["Late", "Active", "Cancelled"],
+      active: ["Active", "Cancelled"],
+      upcoming: ["Upcoming", "Active", "Late", "Cancelled"],
+      cancelled: ["Cancelled", "Active"],
+      completed: [],
+    };
 
-        const ACTIVE_AVAILABILITY = ["Open", "Full"];
+    // and here is here tutors are currently filled in
+    const currentTutors = [
+      {
+        id: 1,
+        name: "NAME",
+        start: "START TIME",
+        end: "END TIME",
+        course: "COURSE",
+        section: "upcoming",
+        availability: "Open",
+      },
+      {
+        id: 2,
+        name: "NAME",
+        start: "START TIME",
+        end: "END TIME",
+        course: "COURSE",
+        section: "upcoming",
+        availability: "Open",
+      },
+      {
+        id: 3,
+        name: "NAME",
+        start: "START TIME",
+        end: "END TIME",
+        course: "COURSE",
+        section: "upcoming",
+        availability: "Open",
+      },
+      {
+        id: 4,
+        name: "NAME",
+        start: "START TIME",
+        end: "END TIME",
+        course: "COURSE",
+        section: "upcoming",
+        availability: "Open",
+      },
+      {
+        id: 5,
+        name: "NAME",
+        start: "START TIME",
+        end: "END TIME",
+        course: "COURSE",
+        section: "completed",
+        availability: "Open",
+      },
+      {
+        id: 6,
+        name: "NAME",
+        start: "START TIME",
+        end: "END TIME",
+        course: "COURSE",
+        section: "completed",
+        availability: "Open",
+      },
+    ];
 
-        // dictionaries to convert section and statuses
-        const statusToSection = {
-            Late: "late",
-            Active: "active",
-            Upcoming: "upcoming",
-            Cancelled: "cancelled",
-            Completed: "completed",
-        };
+    const ACTIVE_AVAILABILITY = ["Open", "Full"];
 
-        const sectionToStatus = {
-            late: "Late",
-            active: "Active",
-            upcoming: "Upcoming",
-            cancelled: "Cancelled",
-            completed: "Completed",
-        };
+    // dictionaries to convert section and statuses
+    const statusToSection = {
+      Late: "late",
+      Active: "active",
+      Upcoming: "upcoming",
+      Cancelled: "cancelled",
+      Completed: "completed",
+    };
 
-        function App() {
-            const [tutors, setTutors] = useState(currentTutors);
+    const sectionToStatus = {
+      late: "Late",
+      active: "Active",
+      upcoming: "Upcoming",
+      cancelled: "Cancelled",
+      completed: "Completed",
+    };
 
-            const changeSection = (id, newStatus) => {
-                setTutors((prev) =>
-                    prev.map((t) =>
-                        t.id === id ? { ...t, section: statusToSection[newStatus] } : t,
-                    ),
-                );
-            };
+    function App() {
+      const [tutors, setTutors] = useState(currentTutors);
 
-            const changeAvailability = (id, val) => {
-                setTutors((prev) =>
-                    prev.map((t) => (t.id === id ? { ...t, availability: val } : t)),
-                );
-            };
+      const changeSection = (id, newStatus) => {
+        setTutors((prev) =>
+          prev.map((t) =>
+            t.id === id ? { ...t, section: statusToSection[newStatus] } : t,
+          ),
+        );
+      };
 
-            // HTML starts here
+      const changeAvailability = (id, val) => {
+        setTutors((prev) =>
+          prev.map((t) => (t.id === id ? { ...t, availability: val } : t)),
+        );
+      };
+
+      // html is here
+      return (
+        <div>
+          {SECTIONS.map((sec) => {
+            const rows = tutors.filter((t) => t.section === sec);
+            const opts = STATUS_OPTIONS[sec];
+            const isActive = sec === "active";
+            const isCompleted = sec === "completed";
+            const colCount = isActive ? 6 : isCompleted ? 4 : 5;
+
+            // Layout for each row
             return (
-                <div>
-                    {SECTIONS.map((sec) => {
-                        const rows = tutors.filter((t) => t.section === sec);
-                        const opts = STATUS_OPTIONS[sec];
-                        const isActive = sec === "active";
-                        const isCompleted = sec === "completed";
-                        const colCount = isActive ? 6 : isCompleted ? 4 : 5;
-
-                        // Layout for each row
-                        return (
-                            <div className="section" key={sec}>
-                                <div className={`section-title ${sec}`}>
-                                    {sectionLabel[sec]}
-                                </div>
-                                <table>
-                                    <thead>
-                                        <tr>
-                                            <th>Name</th>
-                                            <th>Start Time</th>
-                                            <th>End Time</th>
-                                            <th>Course</th>
-                                            {!isCompleted && <th>Status</th>}
-                                            {isActive && <th>Availability</th>}
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        {rows.length === 0 && (
-                                            <tr>
-                                                <td colSpan={colCount} className="empty-section">
-                                                    No tutors
-                                                </td>
-                                            </tr>
-                                        )}
-                                        {rows.map((t) => (
-                                            <tr key={t.id}>
-                                                <td>{t.name}</td>
-                                                <td>{t.start}</td>
-                                                <td>{t.end}</td>
-                                                <td>{t.course}</td>
-                                                {!isCompleted && (
-                                                    <td>
-                                                        <select
-                                                            value={sectionToStatus[t.setion]}
-                                                            onChange={(e) =>
-                                                                changeSection(t.id, e.target.value)
-                                                            }
-                                                        >
-                                                            {opts.map((o) => (
-                                                                <option key={o} value={o}>
-                                                                    {o}
-                                                                </option>
-                                                            ))}
-                                                        </select>
-                                                    </td>
-                                                )}
-                                                {isActive && (
-                                                    <td>
-                                                        <select
-                                                            value={t.availability}
-                                                            onChange={(e) =>
-                                                                changeAvailability(t.id, e.target.value)
-                                                            }
-                                                        >
-                                                            {ACTIVE_AVAILABILITY.map((s) => (
-                                                                <option key={s} value={s}>
-                                                                    {s}
-                                                                </option>
-                                                            ))}
-                                                        </select>
-                                                    </td>
-                                                )}
-                                            </tr>
-                                        ))}
-                                    </tbody>
-                                </table>
-                            </div>
-                        );
-                    })}
+              <div className="section" key={sec}>
+                <div className={`section-title ${sec}`}>
+                  {sectionLabel[sec]}
                 </div>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Start Time</th>
+                      <th>End Time</th>
+                      <th>Course</th>
+                      {!isCompleted && <th>Status</th>}
+                      {isActive && <th>Availability</th>}
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {rows.length === 0 && (
+                      <tr>
+                        <td colSpan={colCount} className="empty-section">
+                          No tutors
+                        </td>
+                      </tr>
+                    )}
+                    {rows.map((t) => (
+                      <tr key={t.id}>
+                        <td>{t.name}</td>
+                        <td>{t.start}</td>
+                        <td>{t.end}</td>
+                        <td>{t.course}</td>
+                        {!isCompleted && (
+                          <td>
+                            <select
+                              value={sectionToStatus[t.setion]}
+                              onChange={(e) =>
+                                changeSection(t.id, e.target.value)
+                              }
+                            >
+                              {opts.map((o) => (
+                                <option key={o} value={o}>
+                                  {o}
+                                </option>
+                              ))}
+                            </select>
+                          </td>
+                        )}
+                        {isActive && (
+                          <td
+                            className={
+                              t.availability === "Full"
+                                ? "status-full"
+                                : "status-open"
+                            }
+                          >
+                            <select
+                              value={t.availability}
+                              onChange={(e) =>
+                                changeAvailability(t.id, e.target.value)
+                              }
+                            >
+                              {ACTIVE_AVAILABILITY.map((s) => (
+                                <option key={s} value={s}>
+                                  {s}
+                                </option>
+                              ))}
+                            </select>
+                          </td>
+                        )}
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
             );
-        }
+          })}
+        </div>
+      );
+    }
 
-        ReactDOM.createRoot(document.getElementById("root")).render(<App />);
-    </script>
-</body>
-
-</html>
-<?php
-// Checks if the user is logged in before opening admin page
-session_start();
-
-if (!isset($_SESSION['user_id'])) {
-
-    header("Location: log_in.php");
-    exit();
-}
-
-$db = mysqli_connect("localhost", "username", "password", "dbname");
-
-if (mysqli_connect_errno()) {
-    exit("Error - could not connect to MySQL: " . mysqli_connect_error());
-}
-
-?>
-
-<!doctype html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8" />
-    <title>ASC Tutor Management</title>
-    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
-    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-
-    <style>
-        @import url("https://fonts.googleapis.com/css2?family=Bungee+Spice&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,600;1,600&family=Quicksand:wght@300..700&display=swap");
-
-        * {
-            font-family: "Inter", sans-serif;
-            font-optical-sizing: auto;
-            font-style: normal;
-        }
-
-        body {
-            background-color: rgb(182, 182, 182);
-            margin: 0;
-        }
-
-        .header-banner {
-            width: 100%;
-            height: 260px;
-            overflow: hidden;
-        }
-
-        .header-banner img {
-            object-fit: cover;
-            width: 100%;
-            height: 100%;
-            object-position: center;
-            display: block;
-        }
-
-        .box {
-            background-color: white;
-            text-align: center;
-            width: 83%;
-            margin: 40px auto;
-            margin-top: -10px;
-            border-radius: 10px;
-            padding: 35px;
-        }
-
-        .section {
-            margin-bottom: 25px;
-            border-radius: 10px;
-            border: 1.6px solid black;
-            overflow: hidden;
-        }
-
-        .section-title {
-            padding: 7px;
-            text-align: left;
-            font-weight: bold;
-        }
-
-        /*Colors for section titles*/
-        .late {
-            background-color: #ffd580;
-        }
-
-        .active {
-            background-color: #90ee90;
-        }
-
-        .upcoming {
-            background-color: #9f9797;
-        }
-
-        .cancelled {
-            background-color: #da7877;
-        }
-
-        .completed {
-            background-color: violet;
-        }
-
-        h1 {
-            text-align: left;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            background-color: white;
-        }
-
-        th {
-            width: 20%;
-            padding: 5px;
-            text-align: center;
-        }
-
-        td {
-            width: 20%;
-            padding: 4px;
-            text-align: center;
-        }
-
-        /*For the active section; Full cap: blue and Accepting: purple*/
-        .status-full {
-            background-color: #add8e6;
-            padding: 4px;
-        }
-
-        .status-open {
-            background-color: #cbc3e3;
-            padding: 4px;
-        }
-    </style>
-</head>
-
-<body>
-    <div class="header-banner">
-        <img src="UMBC header.png" alt="UMBC Academic Success Center" />
-    </div>
-    <div class="box">
-        <!--Need to add UMBC header-->
-        <h1>Drop-In Tutor Check-In System</h1>
-        <div id="root"></div>
-    </div>
-
-    <script type="text/babel">
-        const { useState } = React;
-
-        const SECTIONS = ["late", "active", "upcoming", "cancelled", "completed"];
-
-        const sectionLabel = {
-            late: "Late Shifts",
-            active: "Active Shifts",
-            upcoming: "Upcoming Shifts",
-            cancelled: "Cancelled Shifts",
-            completed: "Completed Shifts",
-        };
-
-        // here is where the status options per section are determined
-        const STATUS_OPTIONS = {
-            late: ["Late", "Active", "Cancelled"],
-            active: ["Active", "Cancelled"],
-            upcoming: ["Upcoming", "Active", "Late", "Cancelled"],
-            cancelled: ["Cancelled", "Active"],
-            completed: [],
-        };
-
-        // and here is here tutors are currently filled in
-        const currentTutors = [
-            {
-                id: 1,
-                name: "NAME",
-                start: "START TIME",
-                end: "END TIME",
-                course: "COURSE",
-                section: "upcoming",
-                availability: "Open",
-            },
-            {
-                id: 2,
-                name: "NAME",
-                start: "START TIME",
-                end: "END TIME",
-                course: "COURSE",
-                section: "upcoming",
-                availability: "Open",
-            },
-            {
-                id: 3,
-                name: "NAME",
-                start: "START TIME",
-                end: "END TIME",
-                course: "COURSE",
-                section: "upcoming",
-                availability: "Open",
-            },
-            {
-                id: 4,
-                name: "NAME",
-                start: "START TIME",
-                end: "END TIME",
-                course: "COURSE",
-                section: "upcoming",
-                availability: "Open",
-            },
-            {
-                id: 5,
-                name: "NAME",
-                start: "START TIME",
-                end: "END TIME",
-                course: "COURSE",
-                section: "completed",
-                availability: "Open",
-            },
-            {
-                id: 6,
-                name: "NAME",
-                start: "START TIME",
-                end: "END TIME",
-                course: "COURSE",
-                section: "completed",
-                availability: "Open",
-            },
-        ];
-
-        const ACTIVE_AVAILABILITY = ["Open", "Full"];
-
-        // dictionaries to convert section and statuses
-        const statusToSection = {
-            Late: "late",
-            Active: "active",
-            Upcoming: "upcoming",
-            Cancelled: "cancelled",
-            Completed: "completed",
-        };
-
-        const sectionToStatus = {
-            late: "Late",
-            active: "Active",
-            upcoming: "Upcoming",
-            cancelled: "Cancelled",
-            completed: "Completed",
-        };
-
-        function App() {
-            const [tutors, setTutors] = useState(currentTutors);
-
-            const changeSection = (id, newStatus) => {
-                setTutors((prev) =>
-                    prev.map((t) =>
-                        t.id === id ? { ...t, section: statusToSection[newStatus] } : t,
-                    ),
-                );
-            };
-
-            const changeAvailability = (id, val) => {
-                setTutors((prev) =>
-                    prev.map((t) => (t.id === id ? { ...t, availability: val } : t)),
-                );
-            };
-
-            // HTML starts here
-            return (
-                <div>
-                    {SECTIONS.map((sec) => {
-                        const rows = tutors.filter((t) => t.section === sec);
-                        const opts = STATUS_OPTIONS[sec];
-                        const isActive = sec === "active";
-                        const isCompleted = sec === "completed";
-                        const colCount = isActive ? 6 : isCompleted ? 4 : 5;
-
-                        // Layout for each row
-                        return (
-                            <div className="section" key={sec}>
-                                <div className={`section-title ${sec}`}>
-                                    {sectionLabel[sec]}
-                                </div>
-                                <table>
-                                    <thead>
-                                        <tr>
-                                            <th>Name</th>
-                                            <th>Start Time</th>
-                                            <th>End Time</th>
-                                            <th>Course</th>
-                                            {!isCompleted && <th>Status</th>}
-                                            {isActive && <th>Availability</th>}
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        {rows.length === 0 && (
-                                            <tr>
-                                                <td colSpan={colCount} className="empty-section">
-                                                    No tutors
-                                                </td>
-                                            </tr>
-                                        )}
-                                        {rows.map((t) => (
-                                            <tr key={t.id}>
-                                                <td>{t.name}</td>
-                                                <td>{t.start}</td>
-                                                <td>{t.end}</td>
-                                                <td>{t.course}</td>
-                                                {!isCompleted && (
-                                                    <td>
-                                                        <select
-                                                            value={sectionToStatus[t.setion]}
-                                                            onChange={(e) =>
-                                                                changeSection(t.id, e.target.value)
-                                                            }
-                                                        >
-                                                            {opts.map((o) => (
-                                                                <option key={o} value={o}>
-                                                                    {o}
-                                                                </option>
-                                                            ))}
-                                                        </select>
-                                                    </td>
-                                                )}
-                                                {isActive && (
-                                                    <td>
-                                                        <select
-                                                            value={t.availability}
-                                                            onChange={(e) =>
-                                                                changeAvailability(t.id, e.target.value)
-                                                            }
-                                                        >
-                                                            {ACTIVE_AVAILABILITY.map((s) => (
-                                                                <option key={s} value={s}>
-                                                                    {s}
-                                                                </option>
-                                                            ))}
-                                                        </select>
-                                                    </td>
-                                                )}
-                                            </tr>
-                                        ))}
-                                    </tbody>
-                                </table>
-                            </div>
-                        );
-                    })}
-                </div>
-            );
-        }
-
-        ReactDOM.createRoot(document.getElementById("root")).render(<App />);
-    </script>
+    ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+  </script>
 </body>
 
 </html>

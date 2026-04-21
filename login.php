@@ -10,13 +10,13 @@ if (mysqli_connect_errno()) {
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $user = htmlspecialchars($_POST['email']);
-    $pass = htmlspecialchars($_POST['pass']);
-    $hashed_password = password_hash($pass, PASSWORD_DEFAULT);
+    $user = trim($_POST['email']);
+    $pass = $_POST['pass'];
 
     // Retrieve user using prepared statement
     $stmt = mysqli_prepare($db, "SELECT admin_id, email, pass FROM admins WHERE email = ?");
-    mysqli_stmt_bind_param($stmt, "s", $admins);
+
+    mysqli_stmt_bind_param($stmt, "s", $user);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_store_result($stmt);
     mysqli_stmt_bind_result($stmt, $admin_id, $email, $hashed_password);
@@ -168,6 +168,10 @@ mysqli_close($db);
         <h1>Log In</h1>
 
         <form id="form" action="login.php" method="post">
+            <?php if (isset($message)) {
+                echo "<p style='color: red;'>$message</p>";
+            } ?>
+
             <label for="email">Email</label><br>
             <input type="text" name="email" required><br>
             <label for="pass">Password</label><br>
