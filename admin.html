@@ -1,6 +1,7 @@
 <!--HTML Admin Interface-->
 <!--Kirsten Chloe Leosala - HTML for the Admin Interface-->
 <!--Chloe: Added the date arrows, feedback form, and active changing to open and full to proper color-->
+<!--Chloe: Added the manual calendar view for the date arrows -->
 
 <!doctype html>
 <html lang="en">
@@ -147,16 +148,6 @@
 
     <div class="box">
       <h1>Drop-In Tutor Check-In System</h1>
-
-      <div class="arrow-feedback-container">
-        <div class="date-button">
-          <button class="arrow-button" onclick="changeDate(-1)">&larr;</button>
-          <span>DATE</span>
-          <button class="arrow-button" onclick="changeDate(1)">&rarr;</button>
-        </div>
-        <button class="feedback-button">Access Feedback</button>
-      </div>
-
       <div id="root"></div>
     </div>
 
@@ -262,6 +253,7 @@
 
       function App() {
         const [tutors, setTutors] = useState(currentTutors);
+        const [currentDate, setCurrentDate] = useState(new Date());
 
         const changeSection = (id, newStatus) => {
           setTutors((prev) =>
@@ -277,9 +269,44 @@
           );
         };
 
+        // This is the change the date for the date arrows
+        const changeDate = (days) => {
+          const newDate = new Date(currentDate);
+          newDate.setDate(newDate.getDate() + days);
+          setCurrentDate(newDate);
+        };
+
+        const dateText = (date) => {
+          const options = { month: "short", day: "numeric", year: "numeric" };
+          return date.toLocaleDateString(undefined, options);
+        };
+
         // html is here
         return (
           <div>
+            {/*Date arrow navigation to go to past or future tutoring dates*/}
+            <div className="arrow-feedback-container">
+              <div className="date-button">
+                <button className="arrow-button" onClick={() => changeDate(-1)}>
+                  &larr;
+                </button>
+
+                {/*Calendar manual view*/}
+                <input
+                  type="date"
+                  value={currentDate.toLocaleDateString("en-CA")}
+                  onChange={(e) => setCurrentDate(new Date(e.target.value))}
+                />
+
+                <button className="arrow-button" onClick={() => changeDate(1)}>
+                  &rarr;
+                </button>
+              </div>
+
+              {/*Accessing feedback button*/}
+              <button className="feedback-button">Access Feedback</button>
+            </div>
+
             {SECTIONS.map((sec) => {
               const rows = tutors.filter((t) => t.section === sec);
               const opts = STATUS_OPTIONS[sec];
