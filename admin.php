@@ -32,7 +32,6 @@ if (mysqli_connect_errno()) {
 
     * {
       font-family: "Inter", sans-serif;
-      font-optical-sizing: auto;
       font-style: normal;
     }
 
@@ -55,7 +54,6 @@ if (mysqli_connect_errno()) {
       display: block;
     }
 
-    /*Container for the date arrows and the student feedback*/
     .arrow-feedback-container {
       display: flex;
       position: relative;
@@ -107,7 +105,6 @@ if (mysqli_connect_errno()) {
       font-weight: bold;
     }
 
-    /*Colors for section titles*/
     .late {
       background-color: #ffd580;
     }
@@ -150,7 +147,6 @@ if (mysqli_connect_errno()) {
       text-align: center;
     }
 
-    /*For the active section; Full cap: blue and Accepting: purple*/
     .status-full {
       background-color: #add8e6;
       padding: 4px;
@@ -170,22 +166,11 @@ if (mysqli_connect_errno()) {
 
   <div class="box">
     <h1>Drop-In Tutor Check-In System</h1>
-
-    <div class="arrow-feedback-container">
-      <div class="date-button">
-        <button class="arrow-button" onclick="changeDate(-1)">&larr;</button>
-        <span>DATE</span>
-        <button class="arrow-button" onclick="changeDate(1)">&rarr;</button>
-      </div>
-      <button class="feedback-button">Access Feedback</button>
-    </div>
-
     <div id="root"></div>
   </div>
 
-  <!--Shifting of status implementation-->
   <script type="text/babel">
-    const { useState } = React;
+    const { useState, useEffect } = React;
 
     const SECTIONS = ["late", "active", "upcoming", "cancelled", "completed"];
 
@@ -197,7 +182,6 @@ if (mysqli_connect_errno()) {
       completed: "Completed Shifts",
     };
 
-    // here is where the status options per section are determined
     const STATUS_OPTIONS = {
       late: ["Late", "Active", "Cancelled"],
       active: ["Active", "Cancelled"],
@@ -206,67 +190,8 @@ if (mysqli_connect_errno()) {
       completed: [],
     };
 
-    // and here is here tutors are currently filled in
-    const currentTutors = [
-      {
-        id: 1,
-        name: "NAME",
-        start: "START TIME",
-        end: "END TIME",
-        course: "COURSE",
-        section: "upcoming",
-        availability: "Open",
-      },
-      {
-        id: 2,
-        name: "NAME",
-        start: "START TIME",
-        end: "END TIME",
-        course: "COURSE",
-        section: "upcoming",
-        availability: "Open",
-      },
-      {
-        id: 3,
-        name: "NAME",
-        start: "START TIME",
-        end: "END TIME",
-        course: "COURSE",
-        section: "upcoming",
-        availability: "Open",
-      },
-      {
-        id: 4,
-        name: "NAME",
-        start: "START TIME",
-        end: "END TIME",
-        course: "COURSE",
-        section: "upcoming",
-        availability: "Open",
-      },
-      {
-        id: 5,
-        name: "NAME",
-        start: "START TIME",
-        end: "END TIME",
-        course: "COURSE",
-        section: "completed",
-        availability: "Open",
-      },
-      {
-        id: 6,
-        name: "NAME",
-        start: "START TIME",
-        end: "END TIME",
-        course: "COURSE",
-        section: "completed",
-        availability: "Open",
-      },
-    ];
-
     const ACTIVE_AVAILABILITY = ["Open", "Full"];
 
-    // dictionaries to convert section and statuses
     const statusToSection = {
       Late: "late",
       Active: "active",
@@ -284,14 +209,62 @@ if (mysqli_connect_errno()) {
     };
 
     function App() {
-      const [tutors, setTutors] = useState(currentTutors);
+      // Start with an empty array instead of dummy data
+      const [tutors, setTutors] = useState([]);
+      const [currentDate, setCurrentDate] = useState(new Date());
 
+      // Helper to format the React date into MySQL format (YYYY-MM-DD)
+      const getFormattedDate = (date) => {
+        const offset = date.getTimezoneOffset()
+        const dateLocal = new Date(date.getTime() - (offset * 60 * 1000))
+        return dateLocal.toISOString().split('T')[0];
+      };
+
+      // Fetch the schedule from the database
+      const loadSchedule = () => {
+        const formattedDate = getFormattedDate(currentDate);
+        fetch('get_sched.php?date=${formattedDate}')
+          .then(response => response.json())
+          .then(data => {
+            if (data.success) {
+              setTutors(data.tutors);
+            } else {
+              console.error("Failed to load:", data.message);
+              setTutors([]); // Clear screen if no data
+            }
+          })
+          .catch(error => console.error("Fetch error:", error));
+      };
+
+      // Re-run the fetch automatically whenever 'currentDate' changes!
+      useEffect(() => {
+        loadSchedule();
+      }, [currentDate]);
+
+      // Handle database updates when an admin changes the status dropdown
       const changeSection = (id, newStatus) => {
         setTutors((prev) =>
           prev.map((t) =>
             t.id === id ? { ...t, section: statusToSection[newStatus] } : t,
           ),
         );
+
+        fetch('update_status.php', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            shift_id: id,
+            new_status: newStatus,
+            date: getFormattedDate(currentDate)
+          })
+        })
+          .then(response => response.json())
+          .then(data => {
+            if (!data.success) {
+              alert("Database Error: " + data.message);
+              loadSchedule(); // Revert screen if database fails
+            }
+          });
       };
 
       const changeAvailability = (id, val) => {
@@ -300,9 +273,39 @@ if (mysqli_connect_errno()) {
         );
       };
 
-      // html is here
+      const changeDate = (days) => {
+        const newDate = new Date(currentDate);
+        newDate.setDate(newDate.getDate() + days);
+        setCurrentDate(newDate);
+      };
+
       return (
         <div>
+          <div className="arrow-feedback-container">
+            <div className="date-button">
+              <button className="arrow-button" onClick={() => changeDate(-1)}>
+                &larr;
+              </button>
+
+              <input
+                type="date"
+                value={getFormattedDate(currentDate)}
+                onChange={(e) => {
+                  const selected = new Date(e.target.value);
+                  // Add timezone offset back so the day doesn't jump backwards
+                  selected.setMinutes(selected.getMinutes() + selected.getTimezoneOffset());
+                  setCurrentDate(selected);
+                }}
+              />
+
+              <button className="arrow-button" onClick={() => changeDate(1)}>
+                &rarr;
+              </button>
+            </div>
+
+            <button className="feedback-button">Access Feedback</button>
+          </div>
+
           {SECTIONS.map((sec) => {
             const rows = tutors.filter((t) => t.section === sec);
             const opts = STATUS_OPTIONS[sec];
@@ -310,7 +313,6 @@ if (mysqli_connect_errno()) {
             const isCompleted = sec === "completed";
             const colCount = isActive ? 6 : isCompleted ? 4 : 5;
 
-            // Layout for each row
             return (
               <div className="section" key={sec}>
                 <div className={`section-title ${sec}`}>
@@ -331,7 +333,7 @@ if (mysqli_connect_errno()) {
                     {rows.length === 0 && (
                       <tr>
                         <td colSpan={colCount} className="empty-section">
-                          No tutors
+                          No tutors scheduled
                         </td>
                       </tr>
                     )}
@@ -344,7 +346,7 @@ if (mysqli_connect_errno()) {
                         {!isCompleted && (
                           <td>
                             <select
-                              value={sectionToStatus[t.setion]}
+                              value={sectionToStatus[t.section]}
                               onChange={(e) =>
                                 changeSection(t.id, e.target.value)
                               }

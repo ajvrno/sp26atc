@@ -3,9 +3,11 @@
 <?php
 require_once 'db_config.php';
 
-// pulls today's calendar date and day of the week
-$today_date = date('Y-m-d');
-$day_of_week = date('l');
+// Check if a date was passed in the URL, otherwise use today
+$today_date = isset($_GET['date']) ? $_GET['date'] : date('Y-m-d');
+
+// Get the spelled-out day of the week for that specific date (e.g., "Monday")
+$day_of_week = date('l', strtotime($today_date));
 
 // query the 'shift' table to find all shifts scheduled for today
 $find_shifts_query = "SELECT shift_id FROM shift WHERE day_of_week = ?";
