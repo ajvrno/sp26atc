@@ -9,11 +9,11 @@ $target_date = isset($_GET['date']) ? $_GET['date'] : date('Y-m-d');
 
 // Query to grab the shift details, the tutor's name, the course, and the current status
 $query = "
-SELECT 
+    SELECT 
         s.shift_id as id, 
         t.first_name as name, 
-        s.start_time as start, 
-        s.end_time as end, 
+        TIME_FORMAT(s.start_time, '%l:%i %p') as start, 
+        TIME_FORMAT(s.end_time, '%l:%i %p') as end, 
         c.course_code as course, 
         st.status_state as section 
     FROM shift s
@@ -21,11 +21,11 @@ SELECT
     JOIN tutor_course tc ON t.student_id = tc.student_id 
     JOIN course c ON tc.course_code = c.course_code
     JOIN status st ON s.shift_id = st.shift_id
-    WHERE st.date = ?
+    WHERE st.`date` = ? AND s.day_of_week = DAYNAME(?)
 ";
 
 $stmt = mysqli_prepare($db, $query);
-mysqli_stmt_bind_param($stmt, "s", $target_date);
+mysqli_stmt_bind_param($stmt, "ss", $target_date, $target_date);
 mysqli_stmt_execute($stmt);
 $result = mysqli_stmt_get_result($stmt);
 

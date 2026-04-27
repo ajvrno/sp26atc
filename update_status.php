@@ -33,7 +33,7 @@ $new_status = $data['new_status'];
 $target_date = isset($data['date']) ? $data['date'] : date('Y-m-d');
 
 // Update the 'status' table for this specific shift on the target date
-$update_query = "UPDATE status SET status_state = ?, admin_id = ? WHERE shift_id = ? AND date = ?";
+$update_query = "UPDATE status SET status_state = ?, admin_id = ? WHERE shift_id = ? AND `date` = ?";
 $stmt = mysqli_prepare($db, $update_query);
 
 mysqli_stmt_bind_param($stmt, "ssss", $new_status, $admin_id, $shift_id, $target_date);

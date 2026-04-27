@@ -220,20 +220,30 @@ if (mysqli_connect_errno()) {
         return dateLocal.toISOString().split('T')[0];
       };
 
-      // Fetch the schedule from the database
+      // Fetch the schedule from the database (WITH SUPER DEBUGGING)
       const loadSchedule = () => {
         const formattedDate = getFormattedDate(currentDate);
-        fetch('get_sched.php?date=${formattedDate}')
-          .then(response => response.json())
-          .then(data => {
-            if (data.success) {
-              setTutors(data.tutors);
-            } else {
-              console.error("Failed to load:", data.message);
-              setTutors([]); // Clear screen if no data
+
+        fetch('get_sched.php?date=' + formattedDate)
+          .then(async (response) => {
+            const rawText = await response.text(); // Grab the raw output first
+
+            try {
+              const data = JSON.parse(rawText); // Try to turn it into JSON
+              if (data.success) {
+                setTutors(data.tutors);
+              } else {
+                console.error("Failed to load:", data.message);
+                setTutors([]);
+              }
+            } catch (e) {
+              alert("React couldn't read the database output! The server said:\n\n" + rawText);
+              setTutors([]);
             }
           })
-          .catch(error => console.error("Fetch error:", error));
+          .catch(error => {
+            alert("Network Fetch Error: " + error);
+          });
       };
 
       // Re-run the fetch automatically whenever 'currentDate' changes!
