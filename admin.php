@@ -291,7 +291,16 @@ if (mysqli_connect_errno()) {
 
       return (
         <div>
+
           <div className="arrow-feedback-container">
+            <div>
+              <button
+                onClick={() => window.location.href = 'logout.php'}
+                style={{ float: 'right', padding: '5px 10px', cursor: 'pointer' }}
+              >
+                Logout
+              </button>
+            </div>
             <div className="date-button">
               <button className="arrow-button" onClick={() => changeDate(-1)}>
                 &larr;
@@ -328,6 +337,7 @@ if (mysqli_connect_errno()) {
                 <div className={`section-title ${sec}`}>
                   {sectionLabel[sec]}
                 </div>
+
                 <table>
                   <thead>
                     <tr>
