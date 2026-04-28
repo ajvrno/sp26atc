@@ -344,7 +344,7 @@ if (mysqli_connect_errno()) {
                       <th>Name</th>
                       <th>Start Time</th>
                       <th>End Time</th>
-                      <th>Course</th>
+                      <th>Course(s)</th>
                       {!isCompleted && <th>Status</th>}
                       {isActive && <th>Availability</th>}
                     </tr>

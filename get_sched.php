@@ -1,4 +1,5 @@
 <?php
+
 session_start();
 require_once 'db_config.php';
 
@@ -14,7 +15,7 @@ $query = "
         t.first_name as name, 
         TIME_FORMAT(s.start_time, '%l:%i %p') as start, 
         TIME_FORMAT(s.end_time, '%l:%i %p') as end, 
-        c.course_code as course, 
+        GROUP_CONCAT(DISTINCT c.course_code SEPARATOR ', ') as course, 
         st.status_state as section 
     FROM shift s
     JOIN tutors t ON s.student_id = t.student_id
@@ -22,7 +23,13 @@ $query = "
     JOIN course c ON tc.course_code = c.course_code
     JOIN status st ON s.shift_id = st.shift_id
     WHERE st.`date` = ? AND s.day_of_week = DAYNAME(?)
+    GROUP BY s.shift_id, t.first_name, s.start_time, s.end_time, st.status_state
 ";
+
+$stmt = mysqli_prepare($db, $query);
+
+// Passing the date twice to fill both question marks!
+mysqli_stmt_bind_param($stmt, "ss", $target_date, $target_date);
 
 $stmt = mysqli_prepare($db, $query);
 mysqli_stmt_bind_param($stmt, "ss", $target_date, $target_date);
