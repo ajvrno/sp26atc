@@ -1,6 +1,6 @@
-<!--Ashley Rabino - PHP script to generate daily status records -->
-
 <?php
+/** Ashley Rabino - PHP script to generate daily status records */
+
 require_once 'db_config.php';
 
 // Check if a date was passed in the URL, otherwise use today

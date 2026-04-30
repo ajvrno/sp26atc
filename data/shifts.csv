@@ -1,0 +1,601 @@
+Course Code,Course Subject,Course Title,Tutor Name,Student ID,Day,Shift ID,Start Time,End Time,Location
+BIOL 101,Biology,Concepts of Biology,Susanna,FA9365,Monday,SHF-0001,11:00 a.m.,1:00 p.m.,Library
+BIOL 101,Biology,Concepts of Biology,Angela,YL0742,Monday,SHF-0002,4:00 p.m.,5:00 p.m.,Library
+BIOL 101,Biology,Concepts of Biology,Shakib,VV7352,Tuesday,SHF-0003,Noon,2:00 p.m.,Library
+BIOL 101,Biology,Concepts of Biology,Zoya,HO5500,Tuesday,SHF-0004,1:00 p.m.,4:00 p.m.,Library
+BIOL 101,Biology,Concepts of Biology,Tristan,FY3144,Wednesday,SHF-0005,11:30 a.m.,1:00 p.m.,Library
+BIOL 101,Biology,Concepts of Biology,Lillian,MY7373,Wednesday,SHF-0006,1:00 p.m.,2:00 p.m.,Library
+BIOL 101,Biology,Concepts of Biology,Angela,YL0742,Wednesday,SHF-0007,4:30 p.m.,6:00 p.m.,Library
+BIOL 101,Biology,Concepts of Biology,Shakib,VV7352,Thursday,SHF-0008,12:30 p.m.,2:00 p.m.,Library
+BIOL 101,Biology,Concepts of Biology,Zoya,HO5500,Thursday,SHF-0009,1:00 p.m.,4:00 p.m.,Library
+BIOL 101,Biology,Concepts of Biology,Avi,QL3375,Thursday,SHF-0010,1:00 p.m.,4:00 p.m.,Library
+BIOL 140,Biology,Foundations of Biology: Ecology and Evolution,Susanna,FA9365,Monday,SHF-0011,11:00 a.m.,1:00 p.m.,Library
+BIOL 140,Biology,Foundations of Biology: Ecology and Evolution,Angela,YL0742,Monday,SHF-0012,4:00 p.m.,5:00 p.m.,Library
+BIOL 140,Biology,Foundations of Biology: Ecology and Evolution,Shakib,VV7352,Tuesday,SHF-0013,Noon,2:00 p.m.,Library
+BIOL 140,Biology,Foundations of Biology: Ecology and Evolution,Zoya,HO5500,Tuesday,SHF-0014,1:00 p.m.,4:00 p.m.,Library
+BIOL 140,Biology,Foundations of Biology: Ecology and Evolution,Tristan,FY3144,Wednesday,SHF-0015,11:30 a.m.,1:00 p.m.,Library
+BIOL 140,Biology,Foundations of Biology: Ecology and Evolution,Lillian,MY7373,Wednesday,SHF-0016,1:00 p.m.,2:00 p.m.,Library
+BIOL 140,Biology,Foundations of Biology: Ecology and Evolution,Angela,YL0742,Wednesday,SHF-0017,4:30 p.m.,6:00 p.m.,Library
+BIOL 140,Biology,Foundations of Biology: Ecology and Evolution,Shakib,VV7352,Thursday,SHF-0018,12:30 p.m.,2:00 p.m.,Library
+BIOL 140,Biology,Foundations of Biology: Ecology and Evolution,Zoya,HO5500,Thursday,SHF-0019,1:00 p.m.,4:00 p.m.,Library
+BIOL 140,Biology,Foundations of Biology: Ecology and Evolution,Avi,QL3375,Thursday,SHF-0020,1:00 p.m.,4:00 p.m.,Library
+BIOL 141,Biology,"Foundations of Biology: Cells, Energy and Organisms",Susanna,FA9365,Monday,SHF-0021,11:00 a.m.,1:00 p.m.,Library
+BIOL 141,Biology,"Foundations of Biology: Cells, Energy and Organisms",Angela,YL0742,Monday,SHF-0022,4:00 p.m.,5:00 p.m.,Library
+BIOL 141,Biology,"Foundations of Biology: Cells, Energy and Organisms",Shakib,VV7352,Tuesday,SHF-0023,Noon,2:00 p.m.,Library
+BIOL 141,Biology,"Foundations of Biology: Cells, Energy and Organisms",Zoya,HO5500,Tuesday,SHF-0024,1:00 p.m.,4:00 p.m.,Library
+BIOL 141,Biology,"Foundations of Biology: Cells, Energy and Organisms",Tristan,FY3144,Wednesday,SHF-0025,11:30 a.m.,1:00 p.m.,Library
+BIOL 141,Biology,"Foundations of Biology: Cells, Energy and Organisms",Lillian,MY7373,Wednesday,SHF-0026,1:00 p.m.,2:00 p.m.,Library
+BIOL 141,Biology,"Foundations of Biology: Cells, Energy and Organisms",Angela,YL0742,Wednesday,SHF-0027,4:30 p.m.,6:00 p.m.,Library
+BIOL 141,Biology,"Foundations of Biology: Cells, Energy and Organisms",Shakib,VV7352,Thursday,SHF-0028,12:30 p.m.,2:00 p.m.,Library
+BIOL 141,Biology,"Foundations of Biology: Cells, Energy and Organisms",Zoya,HO5500,Thursday,SHF-0029,1:00 p.m.,4:00 p.m.,Library
+BIOL 141,Biology,"Foundations of Biology: Cells, Energy and Organisms",Avi,QL3375,Thursday,SHF-0030,1:00 p.m.,4:00 p.m.,Library
+BIOL 251,Biology,Human Anatomy and Physiology I,Chelsea,FZ0230,Tuesday,SHF-0031,12:30 p.m.,1:30 p.m.,Library
+BIOL 251,Biology,Human Anatomy and Physiology I,Moyo,CN4017,Tuesday,SHF-0032,5:00 p.m.,6:00 p.m.,Library
+BIOL 251,Biology,Human Anatomy and Physiology I,Moyo,CN4017,Wednesday,SHF-0033,5:00 p.m.,6:00 p.m.,Library
+BIOL 273,Biology,Microbiology for Allied Health,Chelsea,FZ0230,Tuesday,SHF-0034,12:30 p.m.,1:30 p.m.,Library
+BIOL 273,Biology,Microbiology for Allied Health,Moyo,CN4017,Tuesday,SHF-0035,5:00 p.m.,6:00 p.m.,Library
+BIOL 273,Biology,Microbiology for Allied Health,Moyo,CN4017,Wednesday,SHF-0036,5:00 p.m.,6:00 p.m.,Library
+BIOL 302,Biology,Molecular and General Genetics,Susanna,FA9365,Monday,SHF-0037,11:00 a.m.,1:00 p.m.,Library
+BIOL 302,Biology,Molecular and General Genetics,Angela,YL0742,Monday,SHF-0038,4:00 p.m.,5:00 p.m.,Library
+BIOL 302,Biology,Molecular and General Genetics,Shakib,VV7352,Tuesday,SHF-0039,Noon,2:00 p.m.,Library
+BIOL 302,Biology,Molecular and General Genetics,Zoya,HO5500,Tuesday,SHF-0040,1:00 p.m.,4:00 p.m.,Library
+BIOL 302,Biology,Molecular and General Genetics,Tristan,FY3144,Wednesday,SHF-0041,11:30 a.m.,1:00 p.m.,Library
+BIOL 302,Biology,Molecular and General Genetics,Angela,YL0742,Wednesday,SHF-0042,4:30 p.m.,6:00 p.m.,Library
+BIOL 302,Biology,Molecular and General Genetics,Shakib,VV7352,Thursday,SHF-0043,12:30 p.m.,2:00 p.m.,Library
+BIOL 302,Biology,Molecular and General Genetics,Zoya,HO5500,Thursday,SHF-0044,1:00 p.m.,4:00 p.m.,Library
+BIOL 302,Biology,Molecular and General Genetics,Avi,QL3375,Thursday,SHF-0045,1:00 p.m.,4:00 p.m.,Library
+BIOL 303,Biology,Cell Biology,Angela,YL0742,Monday,SHF-0046,4:00 p.m.,5:00 p.m.,Library
+BIOL 303,Biology,Cell Biology,Zoya,HO5500,Tuesday,SHF-0047,1:00 p.m.,4:00 p.m.,Library
+BIOL 303,Biology,Cell Biology,Tristan,FY3144,Wednesday,SHF-0048,11:30 a.m.,1:00 p.m.,Library
+BIOL 303,Biology,Cell Biology,Angela,YL0742,Wednesday,SHF-0049,4:30 p.m.,6:00 p.m.,Library
+BIOL 303,Biology,Cell Biology,Zoya,HO5500,Thursday,SHF-0050,1:00 p.m.,4:00 p.m.,Library
+BIOL 303,Biology,Cell Biology,Avi,QL3375,Thursday,SHF-0051,1:00 p.m.,4:00 p.m.,Library
+BIOL 430,Biology,Biological Chemistry,Zoya,HO5500,Tuesday,SHF-0052,1:00 p.m.,4:00 p.m.,Library
+BIOL 430,Biology,Biological Chemistry,Zoya,HO5500,Thursday,SHF-0053,1:00 p.m.,4:00 p.m.,Library
+CHEM 100,Chemistry,The Chemical World,Avi,QL3375,Thursday,SHF-0054,1:00 p.m.,4:00 p.m.,Library
+CHEM 101,Chemistry,Principles of Chemistry I,Susanna,FA9365,Monday,SHF-0055,11:00 a.m.,1:00 p.m.,Library
+CHEM 101,Chemistry,Principles of Chemistry I,Angela,YL0742,Monday,SHF-0056,4:00 p.m.,5:00 p.m.,Library
+CHEM 101,Chemistry,Principles of Chemistry I,Iniya,NX1284,Tuesday,SHF-0057,1:00 p.m.,2:30 p.m.,Library
+CHEM 101,Chemistry,Principles of Chemistry I,Iniya,NX1284,Tuesday,SHF-0058,4:00 p.m.,5:00 p.m.,Library
+CHEM 101,Chemistry,Principles of Chemistry I,Iniya,NX1284,Wednesday,SHF-0059,11:00 a.m.,12:00 p.m.,Library
+CHEM 101,Chemistry,Principles of Chemistry I,Molemo,AL2865,Wednesday,SHF-0060,Noon,2:00 p.m.,Library
+CHEM 101,Chemistry,Principles of Chemistry I,Shayan,VF3828,Wednesday,SHF-0061,2:00 p.m.,4:30 p.m.,Library
+CHEM 101,Chemistry,Principles of Chemistry I,Zach,ZJ7616,Wednesday,SHF-0062,3:00 p.m.,5:00 p.m.,Library
+CHEM 101,Chemistry,Principles of Chemistry I,Angela,YL0742,Wednesday,SHF-0063,4:30 p.m.,6:00 p.m.,Library
+CHEM 101,Chemistry,Principles of Chemistry I,Shayan,VF3828,Thursday,SHF-0064,Noon,1:00 p.m.,Library
+CHEM 101,Chemistry,Principles of Chemistry I,Avi,QL3375,Thursday,SHF-0065,1:00 p.m.,4:00 p.m.,Library
+CHEM 101,Chemistry,Principles of Chemistry I,Zach,ZJ7616,Thursday,SHF-0066,3:30 p.m.,5:00 p.m.,Library
+CHEM 101,Chemistry,Principles of Chemistry I,Himani,HL9712,Thursday,SHF-0067,5:00 p.m.,6:00 p.m.,Library
+CHEM 101,Chemistry,Principles of Chemistry I,Zach,ZJ7616,Friday,SHF-0068,11:00 a.m.,12:00 p.m.,Library
+CHEM 101,Chemistry,Principles of Chemistry I,Himani,HL9712,Friday,SHF-0069,Noon,1:00 p.m.,Library
+CHEM 101,Chemistry,Principles of Chemistry I,Shayan,VF3828,Friday,SHF-0070,1:00 p.m.,2:00 p.m.,Library
+CHEM 101,Chemistry,Principles of Chemistry I,Molemo,AL2865,Friday,SHF-0071,1:00 p.m.,2:00 p.m.,Library
+CHEM 102,Chemistry,Principles of Chemistry II,Theo,GL3703,Monday,SHF-0072,Noon,2:00 p.m.,Library
+CHEM 102,Chemistry,Principles of Chemistry II,Angela,YL0742,Monday,SHF-0073,4:00 p.m.,5:00 p.m.,Library
+CHEM 102,Chemistry,Principles of Chemistry II,Iniya,NX1284,Tuesday,SHF-0074,1:00 p.m.,2:30 p.m.,Library
+CHEM 102,Chemistry,Principles of Chemistry II,Iniya,NX1284,Tuesday,SHF-0075,4:00 p.m.,5:00 p.m.,Library
+CHEM 102,Chemistry,Principles of Chemistry II,Iniya,NX1284,Wednesday,SHF-0076,11:00 a.m.,12:00 p.m.,Library
+CHEM 102,Chemistry,Principles of Chemistry II,Molemo,AL2865,Wednesday,SHF-0077,Noon,2:00 p.m.,Library
+CHEM 102,Chemistry,Principles of Chemistry II,Shayan,VF3828,Wednesday,SHF-0078,2:00 p.m.,4:30 p.m.,Library
+CHEM 102,Chemistry,Principles of Chemistry II,Zach,ZJ7616,Wednesday,SHF-0079,3:00 p.m.,5:00 p.m.,Library
+CHEM 102,Chemistry,Principles of Chemistry II,Angela,YL0742,Wednesday,SHF-0080,4:30 p.m.,6:00 p.m.,Library
+CHEM 102,Chemistry,Principles of Chemistry II,Shayan,VF3828,Thursday,SHF-0081,Noon,1:00 p.m.,Library
+CHEM 102,Chemistry,Principles of Chemistry II,Avi,QL3375,Thursday,SHF-0082,1:00 p.m.,4:00 p.m.,Library
+CHEM 102,Chemistry,Principles of Chemistry II,Zach,ZJ7616,Thursday,SHF-0083,3:30 p.m.,5:00 p.m.,Library
+CHEM 102,Chemistry,Principles of Chemistry II,Himani,HL9712,Thursday,SHF-0084,5:00 p.m.,6:00 p.m.,Library
+CHEM 102,Chemistry,Principles of Chemistry II,Zach,ZJ7616,Friday,SHF-0085,11:00 a.m.,12:00 p.m.,Library
+CHEM 102,Chemistry,Principles of Chemistry II,Himani,HL9712,Friday,SHF-0086,Noon,1:00 p.m.,Library
+CHEM 102,Chemistry,Principles of Chemistry II,Shayan,VF3828,Friday,SHF-0087,1:00 p.m.,2:00 p.m.,Library
+CHEM 102,Chemistry,Principles of Chemistry II,Molemo,AL2865,Friday,SHF-0088,1:00 p.m.,2:00 p.m.,Library
+CHEM 120,Chemistry,"Introduction to General, Organic, and Biochemistry",Moyo,CN4017,Tuesday,SHF-0089,5:00 p.m.,6:00 p.m.,Library
+CHEM 120,Chemistry,"Introduction to General, Organic, and Biochemistry",Moyo,CN4017,Wednesday,SHF-0090,5:00 p.m.,6:00 p.m.,Library
+CHEM 120,Chemistry,"Introduction to General, Organic, and Biochemistry",Avi,QL3375,Thursday,SHF-0091,1:00 p.m.,4:00 p.m.,Library
+CHEM 300,Chemistry,Analytical Chemistry,Theo,GL3703,Monday,SHF-0092,Noon,2:00 p.m.,Library
+CHEM 300,Chemistry,Analytical Chemistry,Avi,QL3375,Thursday,SHF-0093,1:00 p.m.,4:00 p.m.,Library
+CHEM 303,Chemistry,Physical Chemistry for the Biochemical Sciences,Avi,QL3375,Thursday,SHF-0094,1:00 p.m.,4:00 p.m.,Library
+CHEM 351,Chemistry,Organic Chemistry I,Susanna,FA9365,Monday,SHF-0095,11:00 a.m.,1:00 p.m.,Library
+CHEM 351,Chemistry,Organic Chemistry I,Aya,ZZ6267,Monday,SHF-0096,2:00 p.m.,4:00 p.m.,Library
+CHEM 351,Chemistry,Organic Chemistry I,Angela,YL0742,Monday,SHF-0097,4:00 p.m.,5:00 p.m.,Library
+CHEM 351,Chemistry,Organic Chemistry I,Karen,KA0415,Tuesday,SHF-0098,4:00 p.m.,5:00 p.m.,Library
+CHEM 351,Chemistry,Organic Chemistry I,Tristan,FY3144,Wednesday,SHF-0099,11:30 a.m.,1:00 p.m.,Library
+CHEM 351,Chemistry,Organic Chemistry I,Lillian,MY7373,Wednesday,SHF-0100,1:00 p.m.,2:00 p.m.,Library
+CHEM 351,Chemistry,Organic Chemistry I,Shayan,VF3828,Wednesday,SHF-0101,2:00 p.m.,4:30 p.m.,Library
+CHEM 351,Chemistry,Organic Chemistry I,Angela,YL0742,Wednesday,SHF-0102,4:30 p.m.,6:00 p.m.,Library
+CHEM 351,Chemistry,Organic Chemistry I,Aya,ZZ6267,Thursday,SHF-0103,11:00 a.m.,1:00 p.m.,Library
+CHEM 351,Chemistry,Organic Chemistry I,Shayan,VF3828,Thursday,SHF-0104,Noon,1:00 p.m.,Library
+CHEM 351,Chemistry,Organic Chemistry I,Karen,KA0415,Thursday,SHF-0105,4:00 p.m.,5:00 p.m.,Library
+CHEM 351,Chemistry,Organic Chemistry I,Karen,KA0415,Friday,SHF-0106,11:30 a.m.,1:30 p.m.,Library
+CHEM 351,Chemistry,Organic Chemistry I,Shayan,VF3828,Friday,SHF-0107,1:00 p.m.,2:00 p.m.,Library
+CHEM 352,Chemistry,Organic Chemistry II,Theo,GL3703,Monday,SHF-0108,Noon,2:00 p.m.,Library
+CHEM 352,Chemistry,Organic Chemistry II,Aya,ZZ6267,Monday,SHF-0109,2:00 p.m.,4:00 p.m.,Library
+CHEM 352,Chemistry,Organic Chemistry II,Karen,KA0415,Tuesday,SHF-0110,4:00 p.m.,5:00 p.m.,Library
+CHEM 352,Chemistry,Organic Chemistry II,Aya,ZZ6267,Thursday,SHF-0111,11:00 a.m.,1:00 p.m.,Library
+CHEM 352,Chemistry,Organic Chemistry II,Karen,KA0415,Thursday,SHF-0112,4:00 p.m.,5:00 p.m.,Library
+CHEM 352,Chemistry,Organic Chemistry II,Karen,KA0415,Friday,SHF-0113,11:30 a.m.,1:30 p.m.,Library
+CMPE 212,Computer Engineering,Principles of Digital Design,Shrikant,AX5334,Monday,SHF-0114,11:00 a.m.,1:00 p.m.,Library
+CMPE 212,Computer Engineering,Principles of Digital Design,Javan,GT0998,Monday,SHF-0115,1:00 p.m.,4:00 p.m.,Library
+CMPE 212,Computer Engineering,Principles of Digital Design,Shrikant,AX5334,Tuesday,SHF-0116,1:00 p.m.,2:00 p.m.,Library
+CMPE 212,Computer Engineering,Principles of Digital Design,Shrikant,AX5334,Tuesday,SHF-0117,2:45 p.m.,3:45 p.m.,Library
+CMPE 212,Computer Engineering,Principles of Digital Design,Shrikant,AX5334,Wednesday,SHF-0118,11:00 a.m.,Noon,Library
+CMPE 212,Computer Engineering,Principles of Digital Design,Javan,GT0998,Wednesday,SHF-0119,1:00 p.m.,4:00 p.m.,Library
+CMPE 212,Computer Engineering,Principles of Digital Design,Shrikant,AX5334,Thursday,SHF-0120,3:00 p.m.,4:00 p.m.,Library
+CMPE 212,Computer Engineering,Principles of Digital Design,Shrikant,AX5334,Thursday,SHF-0121,5:00 p.m.,6:00 p.m.,Library
+CMPE 212,Computer Engineering,Principles of Digital Design,Shrikant,AX5334,Friday,SHF-0122,11:00 a.m.,2:00 p.m.,Library
+CMPE 306,Computer Engineering,Introductory Circuit Theory,Elvis,MX5501,Monday,SHF-0123,11:00 a.m.,2:00 p.m.,Library
+CMPE 306,Computer Engineering,Introductory Circuit Theory,Javan,GT0998,Monday,SHF-0124,1:00 p.m.,4:00 p.m.,Library
+CMPE 306,Computer Engineering,Introductory Circuit Theory,Elvis,MX5501,Wednesday,SHF-0125,11:00 a.m.,2:00 p.m.,Library
+CMPE 306,Computer Engineering,Introductory Circuit Theory,Javan,GT0998,Wednesday,SHF-0126,1:00 p.m.,4:00 p.m.,Library
+CMPE 314,Computer Engineering,Principles of Electronic Circuits,Ian,VM0344,Monday,SHF-0127,11:00 a.m.,12:30 p.m.,Library
+CMPE 314,Computer Engineering,Principles of Electronic Circuits,Elvis,MX5501,Monday,SHF-0128,11:00 a.m.,2:00 p.m.,Library
+CMPE 314,Computer Engineering,Principles of Electronic Circuits,Ian,VM0344,Tuesday,SHF-0129,11:30 a.m.,2:00 p.m.,Library
+CMPE 314,Computer Engineering,Principles of Electronic Circuits,Ian,VM0344,Wednesday,SHF-0130,11:00 a.m.,12:30 p.m.,Library
+CMPE 314,Computer Engineering,Principles of Electronic Circuits,Elvis,MX5501,Wednesday,SHF-0131,11:00 a.m.,2:00 p.m.,Library
+CMPE 314,Computer Engineering,Principles of Electronic Circuits,Ian,VM0344,Thursday,SHF-0132,11:30 a.m.,2:00 p.m.,Library
+CMSC 201,Computer Science,Computer Science I,Ian,VM0344,Monday,SHF-0133,11:00 a.m.,12:30 p.m.,Library
+CMSC 201,Computer Science,Computer Science I,Kodi,ZW5148,Monday,SHF-0134,11:00 a.m.,12:30 p.m.,Library
+CMSC 201,Computer Science,Computer Science I,Shrikant,AX5334,Monday,SHF-0135,11:00 a.m.,1:00 p.m.,Library
+CMSC 201,Computer Science,Computer Science I,Max A.,PL4579,Monday,SHF-0136,12:30 p.m.,2:30 p.m.,Library
+CMSC 201,Computer Science,Computer Science I,Kaila,AG2337,Monday,SHF-0137,12:30 p.m.,4:00 p.m.,Library
+CMSC 201,Computer Science,Computer Science I,Javan,GT0998,Monday,SHF-0138,1:00 p.m.,4:00 p.m.,Library
+CMSC 201,Computer Science,Computer Science I,Sina,BI2160,Monday,SHF-0139,2:30 p.m.,5:00 p.m.,Library
+CMSC 201,Computer Science,Computer Science I,Lily,IH8133,Monday,SHF-0140,3:00 p.m.,6:00 p.m.,Library
+CMSC 201,Computer Science,Computer Science I,Max A.,PL4579,Tuesday,SHF-0141,11:00 a.m.,2:15 p.m.,Library
+CMSC 201,Computer Science,Computer Science I,Kyle,ZN5690,Tuesday,SHF-0142,11:00 a.m.,12:30 p.m.,Library
+CMSC 201,Computer Science,Computer Science I,Ian,VM0344,Tuesday,SHF-0143,11:30 a.m.,2:00 p.m.,Library
+CMSC 201,Computer Science,Computer Science I,Sina,BI2160,Tuesday,SHF-0144,12:30 p.m.,5:00 p.m.,Library
+CMSC 201,Computer Science,Computer Science I,Shrikant,AX5334,Tuesday,SHF-0145,1:00 p.m.,2:00 p.m.,Library
+CMSC 201,Computer Science,Computer Science I,Shrikant,AX5334,Tuesday,SHF-0146,2:45 p.m.,3:45 p.m.,Library
+CMSC 201,Computer Science,Computer Science I,Kyle,ZN5690,Tuesday,SHF-0147,5:00 p.m.,6:00 p.m.,Library
+CMSC 201,Computer Science,Computer Science I,Aren,RU5618,Wednesday,SHF-0148,11:00 a.m.,12:30 p.m.,Library
+CMSC 201,Computer Science,Computer Science I,Ian,VM0344,Wednesday,SHF-0149,11:00 a.m.,12:30 p.m.,Library
+CMSC 201,Computer Science,Computer Science I,Kodi,ZW5148,Wednesday,SHF-0150,11:00 a.m.,12:30 p.m.,Library
+CMSC 201,Computer Science,Computer Science I,Shrikant,AX5334,Wednesday,SHF-0151,11:00 a.m.,Noon,Library
+CMSC 201,Computer Science,Computer Science I,Max A.,PL4579,Wednesday,SHF-0152,12:30 p.m.,2:30 p.m.,Library
+CMSC 201,Computer Science,Computer Science I,Kaila,AG2337,Wednesday,SHF-0153,12:30 p.m.,4:00 p.m.,Library
+CMSC 201,Computer Science,Computer Science I,Javan,GT0998,Wednesday,SHF-0154,1:00 p.m.,4:00 p.m.,Library
+CMSC 201,Computer Science,Computer Science I,Kodi,ZW5148,Wednesday,SHF-0155,2:30 p.m.,3:45 p.m.,Library
+CMSC 201,Computer Science,Computer Science I,Lily,IH8133,Wednesday,SHF-0156,2:45 p.m.,3:45 p.m.,Library
+CMSC 201,Computer Science,Computer Science I,Max A.,PL4579,Thursday,SHF-0157,11:00 a.m.,2:15 p.m.,Library
+CMSC 201,Computer Science,Computer Science I,Ian,VM0344,Thursday,SHF-0158,11:30 a.m.,2:00 p.m.,Library
+CMSC 201,Computer Science,Computer Science I,Sina,BI2160,Thursday,SHF-0159,12:30 p.m.,5:00 p.m.,Library
+CMSC 201,Computer Science,Computer Science I,Shrikant,AX5334,Thursday,SHF-0160,3:00 p.m.,4:00 p.m.,Library
+CMSC 201,Computer Science,Computer Science I,Max A.,PL4579,Thursday,SHF-0161,4:00 p.m.,6:00 p.m.,Library
+CMSC 201,Computer Science,Computer Science I,Shrikant,AX5334,Thursday,SHF-0162,5:00 p.m.,6:00 p.m.,Library
+CMSC 201,Computer Science,Computer Science I,Kaila,AG2337,Friday,SHF-0163,11:00 a.m.,2:00 p.m.,Library
+CMSC 201,Computer Science,Computer Science I,Kodi,ZW5148,Friday,SHF-0164,11:00 a.m.,2:00 p.m.,Library
+CMSC 201,Computer Science,Computer Science I,Shrikant,AX5334,Friday,SHF-0165,11:00 a.m.,2:00 p.m.,Library
+CMSC 201,Computer Science,Computer Science I,Sina,BI2160,Friday,SHF-0166,11:00 a.m.,2:00 p.m.,Library
+CMSC 202,Computer Science,Computer Science II,Ian,VM0344,Monday,SHF-0167,11:00 a.m.,12:30 p.m.,Library
+CMSC 202,Computer Science,Computer Science II,Kodi,ZW5148,Monday,SHF-0168,11:00 a.m.,12:30 p.m.,Library
+CMSC 202,Computer Science,Computer Science II,Shrikant,AX5334,Monday,SHF-0169,11:00 a.m.,1:00 p.m.,Library
+CMSC 202,Computer Science,Computer Science II,Max A.,PL4579,Monday,SHF-0170,12:30 p.m.,2:30 p.m.,Library
+CMSC 202,Computer Science,Computer Science II,Kaila,AG2337,Monday,SHF-0171,12:30 p.m.,4:00 p.m.,Library
+CMSC 202,Computer Science,Computer Science II,Javan,GT0998,Monday,SHF-0172,1:00 p.m.,4:00 p.m.,Library
+CMSC 202,Computer Science,Computer Science II,Sina,BI2160,Monday,SHF-0173,2:30 p.m.,5:00 p.m.,Library
+CMSC 202,Computer Science,Computer Science II,Lily,IH8133,Monday,SHF-0174,3:00 p.m.,6:00 p.m.,Library
+CMSC 202,Computer Science,Computer Science II,Max A.,PL4579,Tuesday,SHF-0175,11:00 a.m.,2:15 p.m.,Library
+CMSC 202,Computer Science,Computer Science II,Kyle,ZN5690,Tuesday,SHF-0176,11:00 a.m.,12:30 p.m.,Library
+CMSC 202,Computer Science,Computer Science II,Ian,VM0344,Tuesday,SHF-0177,11:30 a.m.,2:00 p.m.,Library
+CMSC 202,Computer Science,Computer Science II,Sina,BI2160,Tuesday,SHF-0178,12:30 p.m.,5:00 p.m.,Library
+CMSC 202,Computer Science,Computer Science II,Shrikant,AX5334,Tuesday,SHF-0179,1:00 p.m.,2:00 p.m.,Library
+CMSC 202,Computer Science,Computer Science II,Shrikant,AX5334,Tuesday,SHF-0180,2:45 p.m.,3:45 p.m.,Library
+CMSC 202,Computer Science,Computer Science II,Kyle,ZN5690,Tuesday,SHF-0181,5:00 p.m.,6:00 p.m.,Library
+CMSC 202,Computer Science,Computer Science II,Ian,VM0344,Wednesday,SHF-0182,11:00 a.m.,12:30 p.m.,Library
+CMSC 202,Computer Science,Computer Science II,Kodi,ZW5148,Wednesday,SHF-0183,11:00 a.m.,12:30 p.m.,Library
+CMSC 202,Computer Science,Computer Science II,Shrikant,AX5334,Wednesday,SHF-0184,11:00 a.m.,Noon,Library
+CMSC 202,Computer Science,Computer Science II,Max A.,PL4579,Wednesday,SHF-0185,12:30 p.m.,2:30 p.m.,Library
+CMSC 202,Computer Science,Computer Science II,Kaila,AG2337,Wednesday,SHF-0186,12:30 p.m.,4:00 p.m.,Library
+CMSC 202,Computer Science,Computer Science II,Javan,GT0998,Wednesday,SHF-0187,1:00 p.m.,4:00 p.m.,Library
+CMSC 202,Computer Science,Computer Science II,Kodi,ZW5148,Wednesday,SHF-0188,2:30 p.m.,3:45 p.m.,Library
+CMSC 202,Computer Science,Computer Science II,Lily,IH8133,Wednesday,SHF-0189,2:45 p.m.,3:45 p.m.,Library
+CMSC 202,Computer Science,Computer Science II,Max A.,PL4579,Thursday,SHF-0190,11:00 a.m.,2:15 p.m.,Library
+CMSC 202,Computer Science,Computer Science II,Ian,VM0344,Thursday,SHF-0191,11:30 a.m.,2:00 p.m.,Library
+CMSC 202,Computer Science,Computer Science II,Sina,BI2160,Thursday,SHF-0192,12:30 p.m.,5:00 p.m.,Library
+CMSC 202,Computer Science,Computer Science II,Shrikant,AX5334,Thursday,SHF-0193,3:00 p.m.,4:00 p.m.,Library
+CMSC 202,Computer Science,Computer Science II,Max A.,PL4579,Thursday,SHF-0194,4:00 p.m.,6:00 p.m.,Library
+CMSC 202,Computer Science,Computer Science II,Shrikant,AX5334,Thursday,SHF-0195,5:00 p.m.,6:00 p.m.,Library
+CMSC 202,Computer Science,Computer Science II,Kaila,AG2337,Friday,SHF-0196,11:00 a.m.,2:00 p.m.,Library
+CMSC 202,Computer Science,Computer Science II,Kodi,ZW5148,Friday,SHF-0197,11:00 a.m.,2:00 p.m.,Library
+CMSC 202,Computer Science,Computer Science II,Shrikant,AX5334,Friday,SHF-0198,11:00 a.m.,2:00 p.m.,Library
+CMSC 202,Computer Science,Computer Science II,Sina,BI2160,Friday,SHF-0199,11:00 a.m.,2:00 p.m.,Library
+CMSC 203,Computer Science,Discrete Structures,Kodi,ZW5148,Monday,SHF-0200,11:00 a.m.,12:30 p.m.,Library
+CMSC 203,Computer Science,Discrete Structures,Shrikant,AX5334,Monday,SHF-0201,11:00 a.m.,1:00 p.m.,Library
+CMSC 203,Computer Science,Discrete Structures,Max M.,JH0253,Monday,SHF-0202,Noon,3:00 p.m.,Library
+CMSC 203,Computer Science,Discrete Structures,Kaila,AG2337,Monday,SHF-0203,12:30 p.m.,4:00 p.m.,Library
+CMSC 203,Computer Science,Discrete Structures,Max A.,PL4579,Monday,SHF-0204,12:30 p.m.,2:30 p.m.,Library
+CMSC 203,Computer Science,Discrete Structures,Max A.,PL4579,Tuesday,SHF-0205,11:00 a.m.,2:15 p.m.,Library
+CMSC 203,Computer Science,Discrete Structures,Shrikant,AX5334,Tuesday,SHF-0206,1:00 p.m.,2:00 p.m.,Library
+CMSC 203,Computer Science,Discrete Structures,Shrikant,AX5334,Tuesday,SHF-0207,2:45 p.m.,3:45 p.m.,Library
+CMSC 203,Computer Science,Discrete Structures,Aren,RU5618,Wednesday,SHF-0208,11:00 a.m.,12:30 p.m.,Library
+CMSC 203,Computer Science,Discrete Structures,Kodi,ZW5148,Wednesday,SHF-0209,11:00 a.m.,12:30 p.m.,Library
+CMSC 203,Computer Science,Discrete Structures,Shrikant,AX5334,Wednesday,SHF-0210,11:00 a.m.,Noon,Library
+CMSC 203,Computer Science,Discrete Structures,Kaila,AG2337,Wednesday,SHF-0211,12:30 p.m.,4:00 p.m.,Library
+CMSC 203,Computer Science,Discrete Structures,Max M.,JH0253,Wednesday,SHF-0212,12:30 p.m.,3:00 p.m.,Library
+CMSC 203,Computer Science,Discrete Structures,Max A.,PL4579,Wednesday,SHF-0213,12:30 p.m.,2:30 p.m.,Library
+CMSC 203,Computer Science,Discrete Structures,Kodi,ZW5148,Wednesday,SHF-0214,2:30 p.m.,3:45 p.m.,Library
+CMSC 203,Computer Science,Discrete Structures,Max A.,PL4579,Thursday,SHF-0215,11:00 a.m.,2:15 p.m.,Library
+CMSC 203,Computer Science,Discrete Structures,Shrikant,AX5334,Thursday,SHF-0216,3:00 p.m.,4:00 p.m.,Library
+CMSC 203,Computer Science,Discrete Structures,Max A.,PL4579,Thursday,SHF-0217,4:00 p.m.,6:00 p.m.,Library
+CMSC 203,Computer Science,Discrete Structures,Shrikant,AX5334,Thursday,SHF-0218,5:00 p.m.,6:00 p.m.,Library
+CMSC 203,Computer Science,Discrete Structures,Kaila,AG2337,Friday,SHF-0219,11:00 a.m.,2:00 p.m.,Library
+CMSC 203,Computer Science,Discrete Structures,Kodi,ZW5148,Friday,SHF-0220,11:00 a.m.,2:00 p.m.,Library
+CMSC 203,Computer Science,Discrete Structures,Shrikant,AX5334,Friday,SHF-0221,11:00 a.m.,2:00 p.m.,Library
+CMSC 313,Computer Science,Computer Organization and Assembly Language Programming,Max M.,JH0253,Monday,SHF-0222,Noon,3:00 p.m.,Library
+CMSC 313,Computer Science,Computer Organization and Assembly Language Programming,Kaila,AG2337,Monday,SHF-0223,12:30 p.m.,4:00 p.m.,Library
+CMSC 313,Computer Science,Computer Organization and Assembly Language Programming,Kaila,AG2337,Wednesday,SHF-0224,12:30 p.m.,4:00 p.m.,Library
+CMSC 313,Computer Science,Computer Organization and Assembly Language Programming,Max M.,JH0253,Wednesday,SHF-0225,12:30 p.m.,3:00 p.m.,Library
+CMSC 313,Computer Science,Computer Organization and Assembly Language Programming,Kaila,AG2337,Friday,SHF-0226,11:00 a.m.,2:00 p.m.,Library
+CMSC 331,Computer Science,Principles of Programming Language,Max A.,PL4579,Monday,SHF-0227,12:30 p.m.,2:30 p.m.,Library
+CMSC 331,Computer Science,Principles of Programming Language,Max A.,PL4579,Tuesday,SHF-0228,11:00 a.m.,2:15 p.m.,Library
+CMSC 331,Computer Science,Principles of Programming Language,Kaila,AG2337,Wednesday,SHF-0229,12:30 p.m.,4:00 p.m.,Library
+CMSC 331,Computer Science,Principles of Programming Language,Max A.,PL4579,Wednesday,SHF-0230,12:30 p.m.,2:30 p.m.,Library
+CMSC 331,Computer Science,Principles of Programming Language,Max A.,PL4579,Thursday,SHF-0231,11:00 a.m.,2:15 p.m.,Library
+CMSC 331,Computer Science,Principles of Programming Language,Kaila,AG2337,Friday,SHF-0232,11:00 a.m.,2:00 p.m.,Library
+CMSC 341,Computer Science,Data Structures,Ian,VM0344,Monday,SHF-0233,11:00 a.m.,12:30 p.m.,Library
+CMSC 341,Computer Science,Data Structures,Shrikant,AX5334,Monday,SHF-0234,11:00 a.m.,Noon,Library
+CMSC 341,Computer Science,Data Structures,Kaila,AG2337,Monday,SHF-0235,12:30 p.m.,4:00 p.m.,Library
+CMSC 341,Computer Science,Data Structures,Max A.,PL4579,Monday,SHF-0236,12:30 p.m.,2:30 p.m.,Library
+CMSC 341,Computer Science,Data Structures,Sina,BI2160,Monday,SHF-0237,2:30 p.m.,5:00 p.m.,Library
+CMSC 341,Computer Science,Data Structures,Max A.,PL4579,Tuesday,SHF-0238,11:00 a.m.,2:15 p.m.,Library
+CMSC 341,Computer Science,Data Structures,Kyle,ZN5690,Tuesday,SHF-0239,11:00 a.m.,12:30 p.m.,Library
+CMSC 341,Computer Science,Data Structures,Ian,VM0344,Tuesday,SHF-0240,11:30 a.m.,2:00 p.m.,Library
+CMSC 341,Computer Science,Data Structures,Sina,BI2160,Tuesday,SHF-0241,12:30 p.m.,5:00 p.m.,Library
+CMSC 341,Computer Science,Data Structures,Kyle,ZN5690,Tuesday,SHF-0242,5:00 p.m.,6:00 p.m.,Library
+CMSC 341,Computer Science,Data Structures,Ian,VM0344,Wednesday,SHF-0243,11:00 a.m.,12:30 p.m.,Library
+CMSC 341,Computer Science,Data Structures,Shrikant,AX5334,Wednesday,SHF-0244,11:00 a.m.,Noon,Library
+CMSC 341,Computer Science,Data Structures,Kaila,AG2337,Wednesday,SHF-0245,12:30 p.m.,4:00 p.m.,Library
+CMSC 341,Computer Science,Data Structures,Max A.,PL4579,Wednesday,SHF-0246,12:30 p.m.,2:30 p.m.,Library
+CMSC 341,Computer Science,Data Structures,Max A.,PL4579,Thursday,SHF-0247,11:00 a.m.,2:15 p.m.,Library
+CMSC 341,Computer Science,Data Structures,Ian,VM0344,Thursday,SHF-0248,11:30 a.m.,2:00 p.m.,Library
+CMSC 341,Computer Science,Data Structures,Sina,BI2160,Thursday,SHF-0249,12:30 p.m.,5:00 p.m.,Library
+CMSC 341,Computer Science,Data Structures,Max A.,PL4579,Thursday,SHF-0250,4:00 p.m.,6:00 p.m.,Library
+CMSC 341,Computer Science,Data Structures,Shrikant,AX5334,Thursday,SHF-0251,5:00 p.m.,6:00 p.m.,Library
+CMSC 341,Computer Science,Data Structures,Kaila,AG2337,Friday,SHF-0252,11:00 a.m.,2:00 p.m.,Library
+CMSC 341,Computer Science,Data Structures,Shrikant,AX5334,Friday,SHF-0253,11:00 a.m.,2:00 p.m.,Library
+CMSC 341,Computer Science,Data Structures,Sina,BI2160,Friday,SHF-0254,11:00 a.m.,2:00 p.m.,Library
+CMSC 411,Computer Science,Computer Architecture,Ian,VM0344,Monday,SHF-0255,11:00 a.m.,12:30 p.m.,Library
+CMSC 411,Computer Science,Computer Architecture,Sina,BI2160,Monday,SHF-0256,2:30 p.m.,5:00 p.m.,Library
+CMSC 411,Computer Science,Computer Architecture,Ian,VM0344,Tuesday,SHF-0257,11:30 a.m.,2:00 p.m.,Library
+CMSC 411,Computer Science,Computer Architecture,Sina,BI2160,Tuesday,SHF-0258,12:30 p.m.,5:00 p.m.,Library
+CMSC 411,Computer Science,Computer Architecture,Ian,VM0344,Wednesday,SHF-0259,11:00 a.m.,12:30 p.m.,Library
+CMSC 411,Computer Science,Computer Architecture,Ian,VM0344,Thursday,SHF-0260,11:30 a.m.,2:00 p.m.,Library
+CMSC 411,Computer Science,Computer Architecture,Sina,BI2160,Thursday,SHF-0261,12:30 p.m.,5:00 p.m.,Library
+CMSC 411,Computer Science,Computer Architecture,Sina,BI2160,Friday,SHF-0262,11:00 a.m.,2:00 p.m.,Library
+CMSC 421,Computer Science,Principles of Operating Systems,Ian,VM0344,Monday,SHF-0263,11:00 a.m.,12:30 p.m.,Library
+CMSC 421,Computer Science,Principles of Operating Systems,Max M.,JH0253,Monday,SHF-0264,Noon,3:00 p.m.,Library
+CMSC 421,Computer Science,Principles of Operating Systems,Sina,BI2160,Monday,SHF-0265,2:30 p.m.,5:00 p.m.,Library
+CMSC 421,Computer Science,Principles of Operating Systems,Ian,VM0344,Tuesday,SHF-0266,11:30 a.m.,2:00 p.m.,Library
+CMSC 421,Computer Science,Principles of Operating Systems,Sina,BI2160,Tuesday,SHF-0267,12:30 p.m.,5:00 p.m.,Library
+CMSC 421,Computer Science,Principles of Operating Systems,Ian,VM0344,Wednesday,SHF-0268,11:00 a.m.,12:30 p.m.,Library
+CMSC 421,Computer Science,Principles of Operating Systems,Max M.,JH0253,Wednesday,SHF-0269,12:30 p.m.,3:00 p.m.,Library
+CMSC 421,Computer Science,Principles of Operating Systems,Ian,VM0344,Thursday,SHF-0270,11:30 a.m.,2:00 p.m.,Library
+CMSC 421,Computer Science,Principles of Operating Systems,Sina,BI2160,Thursday,SHF-0271,12:30 p.m.,5:00 p.m.,Library
+CMSC 421,Computer Science,Principles of Operating Systems,Sina,BI2160,Friday,SHF-0272,11:00 a.m.,2:00 p.m.,Library
+CMSC 426,Computer Science,Principles of Computer Security,Ian,VM0344,Monday,SHF-0273,11:00 a.m.,12:30 p.m.,Library
+CMSC 426,Computer Science,Principles of Computer Security,Sina,BI2160,Monday,SHF-0274,2:30 p.m.,5:00 p.m.,Library
+CMSC 426,Computer Science,Principles of Computer Security,Ian,VM0344,Tuesday,SHF-0275,11:30 a.m.,2:00 p.m.,Library
+CMSC 426,Computer Science,Principles of Computer Security,Sina,BI2160,Tuesday,SHF-0276,12:30 p.m.,5:00 p.m.,Library
+CMSC 426,Computer Science,Principles of Computer Security,Ian,VM0344,Wednesday,SHF-0277,11:00 a.m.,12:30 p.m.,Library
+CMSC 426,Computer Science,Principles of Computer Security,Ian,VM0344,Thursday,SHF-0278,11:30 a.m.,2:00 p.m.,Library
+CMSC 426,Computer Science,Principles of Computer Security,Sina,BI2160,Thursday,SHF-0279,12:30 p.m.,5:00 p.m.,Library
+CMSC 426,Computer Science,Principles of Computer Security,Sina,BI2160,Friday,SHF-0280,11:00 a.m.,2:00 p.m.,Library
+CMSC 441,Computer Science,Design and Analysis of Algorithms,Sina,BI2160,Monday,SHF-0281,2:30 p.m.,5:00 p.m.,Library
+CMSC 441,Computer Science,Design and Analysis of Algorithms,Sina,BI2160,Tuesday,SHF-0282,12:30 p.m.,5:00 p.m.,Library
+CMSC 441,Computer Science,Design and Analysis of Algorithms,Sina,BI2160,Thursday,SHF-0283,12:30 p.m.,5:00 p.m.,Library
+CMSC 441,Computer Science,Design and Analysis of Algorithms,Sina,BI2160,Friday,SHF-0284,11:00 a.m.,2:00 p.m.,Library
+CMSC 471,Computer Science,Introduction to Artificial Intelligence,Kaila,AG2337,Monday,SHF-0285,12:30 p.m.,4:00 p.m.,Library
+CMSC 471,Computer Science,Introduction to Artificial Intelligence,Kaila,AG2337,Wednesday,SHF-0286,12:30 p.m.,4:00 p.m.,Library
+CMSC 471,Computer Science,Introduction to Artificial Intelligence,Kaila,AG2337,Friday,SHF-0287,11:00 a.m.,2:00 p.m.,Library
+ECON 101,Economics,Principles of Microeconomics,Adamo,SL6799,Monday,SHF-0288,2:30 p.m.,4:00 p.m.,Library
+ECON 101,Economics,Principles of Microeconomics,Adamo,SL6799,Thursday,SHF-0289,4:00 p.m.,6:00 p.m.,Library
+ECON 102,Economics,Principles of Macroeconomics,Adamo,SL6799,Monday,SHF-0290,2:30 p.m.,4:00 p.m.,Library
+ECON 102,Economics,Principles of Macroeconomics,Adamo,SL6799,Thursday,SHF-0291,4:00 p.m.,6:00 p.m.,Library
+GES 102,Geographical and Environmental Systems,"People, Place, and Environment: A Global Geographic
+            Perspective",Bridget,GL6928,Tuesday,SHF-0292,11:30,2:00 p.m.,"located in GIS lab and classroom across the hall, Sondheim 007B and 001"
+GES 102,Geographical and Environmental Systems,"People, Place, and Environment: A Global Geographic
+            Perspective",Bridget,GL6928,Thursday,SHF-0293,11:30,2:00 p.m.,"located in GIS lab and classroom across the hall, Sondheim 007B and 001"
+GES 110,Geographical and Environmental Systems,"The Changing Earth: Climate, Ecosystems, Water, and
+            Landscapes",Bridget,GL6928,Tuesday,SHF-0294,11:30,2:00 p.m.,"located in GIS lab and classroom across the hall, Sondheim 007B and 001"
+GES 110,Geographical and Environmental Systems,"The Changing Earth: Climate, Ecosystems, Water, and
+            Landscapes",Bridget,GL6928,Thursday,SHF-0295,11:30,2:00 p.m.,"located in GIS lab and classroom across the hall, Sondheim 007B and 001"
+GES 120,Geographical and Environmental Systems,Environmental Science and Conservation,Bridget,GL6928,Tuesday,SHF-0296,11:30,2:00 p.m.,"located in GIS lab and classroom across the hall, Sondheim 007B and 001"
+GES 120,Geographical and Environmental Systems,Environmental Science and Conservation,Bridget,GL6928,Thursday,SHF-0297,11:30,2:00 p.m.,"located in GIS lab and classroom across the hall, Sondheim 007B and 001"
+GES 286,Geographical and Environmental Systems,Exploring the Environment: A Geo-Spatial Perspective,Bridget,GL6928,Tuesday,SHF-0298,11:30,2:00 p.m.,"located in GIS lab and classroom across the hall, Sondheim 007B and 001"
+GES 286,Geographical and Environmental Systems,Exploring the Environment: A Geo-Spatial Perspective,Bridget,GL6928,Thursday,SHF-0299,11:30,2:00 p.m.,"located in GIS lab and classroom across the hall, Sondheim 007B and 001"
+GES 386,Geographical and Environmental Systems,Introduction to Geographic Information Systems,Bridget,GL6928,Tuesday,SHF-0300,11:30,2:00 p.m.,"located in GIS lab and classroom across the hall, Sondheim 007B and 001"
+GES 386,Geographical and Environmental Systems,Introduction to Geographic Information Systems,Bridget,GL6928,Thursday,SHF-0301,11:30,2:00 p.m.,"located in GIS lab and classroom across the hall, Sondheim 007B and 001"
+GES 488,Geographical and Environmental Systems,Spatial Data Analysis and GIS Applications,Bridget,GL6928,Tuesday,SHF-0302,11:30,2:00 p.m.,"located in GIS lab and classroom across the hall, Sondheim 007B and 001"
+GES 488,Geographical and Environmental Systems,Spatial Data Analysis and GIS Applications,Bridget,GL6928,Thursday,SHF-0303,11:30,2:00 p.m.,"located in GIS lab and classroom across the hall, Sondheim 007B and 001"
+IS 147,Information Systems,Introduction to Computer Programming,Sophia,IJ7186,Tuesday,SHF-0304,Noon,1:00 p.m.,Library
+IS 147,Information Systems,Introduction to Computer Programming,Sophia,IJ7186,Tuesday,SHF-0305,4:00 p.m.,6:00 p.m.,Library
+IS 147,Information Systems,Introduction to Computer Programming,Sophia,IJ7186,Thursday,SHF-0306,Noon,1:00 p.m.,Library
+IS 147,Information Systems,Introduction to Computer Programming,Sophia,IJ7186,Thursday,SHF-0307,4:00 p.m.,6:00 p.m.,Library
+IS 247,Information Systems,Computer Programming II,Sophia,IJ7186,Tuesday,SHF-0308,Noon,1:00 p.m.,Library
+IS 247,Information Systems,Computer Programming II,Sophia,IJ7186,Tuesday,SHF-0309,4:00 p.m.,6:00 p.m.,Library
+IS 247,Information Systems,Computer Programming II,Sophia,IJ7186,Thursday,SHF-0310,Noon,1:00 p.m.,Library
+IS 247,Information Systems,Computer Programming II,Sophia,IJ7186,Thursday,SHF-0311,4:00 p.m.,6:00 p.m.,Library
+IS 300,Information Systems,Management Information Systems,Sophia,IJ7186,Tuesday,SHF-0312,Noon,1:00 p.m.,Library
+IS 300,Information Systems,Management Information Systems,Sophia,IJ7186,Tuesday,SHF-0313,4:00 p.m.,6:00 p.m.,Library
+IS 300,Information Systems,Management Information Systems,Sophia,IJ7186,Thursday,SHF-0314,Noon,1:00 p.m.,Library
+IS 300,Information Systems,Management Information Systems,Sophia,IJ7186,Thursday,SHF-0315,4:00 p.m.,6:00 p.m.,Library
+IS 310,Information Systems,Software and Hardware Concepts,Sophia,IJ7186,Tuesday,SHF-0316,Noon,1:00 p.m.,Library
+IS 310,Information Systems,Software and Hardware Concepts,Sophia,IJ7186,Tuesday,SHF-0317,4:00 p.m.,6:00 p.m.,Library
+IS 310,Information Systems,Software and Hardware Concepts,Sophia,IJ7186,Thursday,SHF-0318,Noon,1:00 p.m.,Library
+IS 310,Information Systems,Software and Hardware Concepts,Sophia,IJ7186,Thursday,SHF-0319,4:00 p.m.,6:00 p.m.,Library
+MATH 104,Math,Quantitative Literacy,Avi,QL3375,Thursday,SHF-0320,1:00 p.m.,4:00 p.m.,Library
+MATH 106,Math,Algebra and Elementary Functions,Akanksha,BE9053,Monday,SHF-0321,11:00 a.m.,Noon,Library
+MATH 106,Math,Algebra and Elementary Functions,Michael,RH2160,Monday,SHF-0322,11:30 a.m.,12:45 p.m.,Library
+MATH 106,Math,Algebra and Elementary Functions,Ini,NA2919,Monday,SHF-0323,1:00 p.m.,2:30 p.m.,Library
+MATH 106,Math,Algebra and Elementary Functions,Abe,JB9431,Monday,SHF-0324,2:30 p.m.,3:30 p.m.,Library
+MATH 106,Math,Algebra and Elementary Functions,Molly,VA5523,Monday,SHF-0325,4:00 p.m.,6:00 p.m.,Library
+MATH 106,Math,Algebra and Elementary Functions,Michael,RH2160,Tuesday,SHF-0326,11:00 a.m.,12:30 p.m.,Library
+MATH 106,Math,Algebra and Elementary Functions,Manav,CV7875,Tuesday,SHF-0327,11:30 a.m.,1:30 p.m.,Library
+MATH 106,Math,Algebra and Elementary Functions,Chelsea,FZ0230,Tuesday,SHF-0328,12:30 p.m.,1:30 p.m.,Library
+MATH 106,Math,Algebra and Elementary Functions,Abe,JB9431,Tuesday,SHF-0329,2:00 p.m.,3:00 p.m.,Library
+MATH 106,Math,Algebra and Elementary Functions,Akanksha,BE9053,Tuesday,SHF-0330,3:00 p.m.,4:30 p.m.,Library
+MATH 106,Math,Algebra and Elementary Functions,Michael,RH2160,Wednesday,SHF-0331,11:15 a.m.,12:45 p.m.,Library
+MATH 106,Math,Algebra and Elementary Functions,Manav,CV7875,Wednesday,SHF-0332,11:30 a.m.,1:00 p.m.,Library
+MATH 106,Math,Algebra and Elementary Functions,Akanksha,BE9053,Wednesday,SHF-0333,1:00 p.m.,2:00 p.m.,Library
+MATH 106,Math,Algebra and Elementary Functions,Abe,JB9431,Wednesday,SHF-0334,2:30 p.m.,3:30 p.m.,Library
+MATH 106,Math,Algebra and Elementary Functions,Molly,VA5523,Wednesday,SHF-0335,4:00 p.m.,6:00 p.m.,Library
+MATH 106,Math,Algebra and Elementary Functions,Manav,CV7875,Thursday,SHF-0336,11:30 a.m.,12:30 p.m.,Library
+MATH 106,Math,Algebra and Elementary Functions,Avi,QL3375,Thursday,SHF-0337,1:00 p.m.,4:00 p.m.,Library
+MATH 106,Math,Algebra and Elementary Functions,Ini,NA2919,Thursday,SHF-0338,1:30 p.m.,2:30 p.m.,Library
+MATH 106,Math,Algebra and Elementary Functions,Akanksha,BE9053,Thursday,SHF-0339,3:00 p.m.,5:00 p.m.,Library
+MATH 150,Math,Precalculus Mathematics,Akanksha,BE9053,Monday,SHF-0340,11:00 a.m.,Noon,Library
+MATH 150,Math,Precalculus Mathematics,Michael,RH2160,Monday,SHF-0341,11:30 a.m.,12:45 p.m.,Library
+MATH 150,Math,Precalculus Mathematics,O'Tega,AL2254,Monday,SHF-0342,12:30 p.m.,2:00 p.m.,Library
+MATH 150,Math,Precalculus Mathematics,O'Tega,AL2254,Monday,SHF-0343,4:00 p.m.,6:00 p.m.,Library
+MATH 150,Math,Precalculus Mathematics,Michael,RH2160,Tuesday,SHF-0344,11:00 a.m.,12:30 p.m.,Library
+MATH 150,Math,Precalculus Mathematics,Manav,CV7875,Tuesday,SHF-0345,11:30 a.m.,1:30 p.m.,Library
+MATH 150,Math,Precalculus Mathematics,Akanksha,BE9053,Tuesday,SHF-0346,3:00 p.m.,4:30 p.m.,Library
+MATH 150,Math,Precalculus Mathematics,Michael,RH2160,Wednesday,SHF-0347,11:15 a.m.,12:45 p.m.,Library
+MATH 150,Math,Precalculus Mathematics,Manav,CV7875,Wednesday,SHF-0348,11:30 a.m.,1:00 p.m.,Library
+MATH 150,Math,Precalculus Mathematics,Akanksha,BE9053,Wednesday,SHF-0349,1:00 p.m.,2:00 p.m.,Library
+MATH 150,Math,Precalculus Mathematics,Manav,CV7875,Thursday,SHF-0350,11:30 a.m.,12:30 p.m.,Library
+MATH 150,Math,Precalculus Mathematics,Avi,QL3375,Thursday,SHF-0351,1:00 p.m.,4:00 p.m.,Library
+MATH 150,Math,Precalculus Mathematics,Akanksha,BE9053,Thursday,SHF-0352,3:00 p.m.,5:00 p.m.,Library
+MATH 151,Math,Calculus and Analytic Geometry I,Rania,GB3977,Monday,SHF-0353,11:00 a.m.,Noon,Library
+MATH 151,Math,Calculus and Analytic Geometry I,Akanksha,BE9053,Monday,SHF-0354,11:00 a.m.,Noon,Library
+MATH 151,Math,Calculus and Analytic Geometry I,Shrikant,AX5334,Monday,SHF-0355,11:00 a.m.,1:00 p.m.,Library
+MATH 151,Math,Calculus and Analytic Geometry I,Michael,RH2160,Monday,SHF-0356,11:30 a.m.,12:45 p.m.,Library
+MATH 151,Math,Calculus and Analytic Geometry I,O'Tega,AL2254,Monday,SHF-0357,12:30 p.m.,2:00 p.m.,Library
+MATH 151,Math,Calculus and Analytic Geometry I,Dani,GI7803,Monday,SHF-0358,2:00 p.m.,4:00 p.m.,Library
+MATH 151,Math,Calculus and Analytic Geometry I,Abe,JB9431,Monday,SHF-0359,2:30 p.m.,3:30 p.m.,Library
+MATH 151,Math,Calculus and Analytic Geometry I,Rania,GB3977,Monday,SHF-0360,4:00 p.m.,5:00 p.m.,Library
+MATH 151,Math,Calculus and Analytic Geometry I,Molly,VA5523,Monday,SHF-0361,4:00 p.m.,6:00 p.m.,Library
+MATH 151,Math,Calculus and Analytic Geometry I,O'Tega,AL2254,Monday,SHF-0362,4:00 p.m.,6:00 p.m.,Library
+MATH 151,Math,Calculus and Analytic Geometry I,Michael,RH2160,Tuesday,SHF-0363,11:00 a.m.,12:30 p.m.,Library
+MATH 151,Math,Calculus and Analytic Geometry I,Manav,CV7875,Tuesday,SHF-0364,11:30 a.m.,1:30 p.m.,Library
+MATH 151,Math,Calculus and Analytic Geometry I,Shakib,VV7352,Tuesday,SHF-0365,Noon,2:00 p.m.,Library
+MATH 151,Math,Calculus and Analytic Geometry I,Shrikant,AX5334,Tuesday,SHF-0366,1:00 p.m.,2:00 p.m.,Library
+MATH 151,Math,Calculus and Analytic Geometry I,Aren,RU5618,Tuesday,SHF-0367,1:30 p.m.,5:00 p.m.,Library
+MATH 151,Math,Calculus and Analytic Geometry I,Abe,JB9431,Tuesday,SHF-0368,2:00 p.m.,3:00 p.m.,Library
+MATH 151,Math,Calculus and Analytic Geometry I,Shrikant,AX5334,Tuesday,SHF-0369,2:45 p.m.,3:45 p.m.,Library
+MATH 151,Math,Calculus and Analytic Geometry I,Akanksha,BE9053,Tuesday,SHF-0370,3:00 p.m.,4:30 p.m.,Library
+MATH 151,Math,Calculus and Analytic Geometry I,Karen,KA0415,Tuesday,SHF-0371,4:00 p.m.,5:00 p.m.,Library
+MATH 151,Math,Calculus and Analytic Geometry I,Kodi,ZW5148,Tuesday,SHF-0372,5:00 p.m.,6:00 p.m.,Library
+MATH 151,Math,Calculus and Analytic Geometry I,Shrikant,AX5334,Wednesday,SHF-0373,11:00 a.m.,Noon,Library
+MATH 151,Math,Calculus and Analytic Geometry I,Michael,RH2160,Wednesday,SHF-0374,11:15 a.m.,12:45 p.m.,Library
+MATH 151,Math,Calculus and Analytic Geometry I,Manav,CV7875,Wednesday,SHF-0375,11:30 a.m.,1:00 p.m.,Library
+MATH 151,Math,Calculus and Analytic Geometry I,Molemo,AL2865,Wednesday,SHF-0376,Noon,2:00 p.m.,Library
+MATH 151,Math,Calculus and Analytic Geometry I,Akanksha,BE9053,Wednesday,SHF-0377,1:00 p.m.,2:00 p.m.,Library
+MATH 151,Math,Calculus and Analytic Geometry I,Dani,GI7803,Wednesday,SHF-0378,2:00 p.m.,4:00 p.m.,Library
+MATH 151,Math,Calculus and Analytic Geometry I,Shayan,VF3828,Wednesday,SHF-0379,2:00 p.m.,4:30 p.m.,Library
+MATH 151,Math,Calculus and Analytic Geometry I,Abe,JB9431,Wednesday,SHF-0380,2:30 p.m.,3:30 p.m.,Library
+MATH 151,Math,Calculus and Analytic Geometry I,Zach,ZJ7616,Wednesday,SHF-0381,3:00 p.m.,5:00 p.m.,Library
+MATH 151,Math,Calculus and Analytic Geometry I,Molly,VA5523,Wednesday,SHF-0382,4:00 p.m.,6:00 p.m.,Library
+MATH 151,Math,Calculus and Analytic Geometry I,Manav,CV7875,Thursday,SHF-0383,11:30 a.m.,12:30 p.m.,Library
+MATH 151,Math,Calculus and Analytic Geometry I,Shayan,VF3828,Thursday,SHF-0384,Noon,1:00 p.m.,Library
+MATH 151,Math,Calculus and Analytic Geometry I,Shakib,VV7352,Thursday,SHF-0385,12:30 p.m.,2:00 p.m.,Library
+MATH 151,Math,Calculus and Analytic Geometry I,Kodi,ZW5148,Thursday,SHF-0386,1:00 p.m.,2:00 p.m.,Library
+MATH 151,Math,Calculus and Analytic Geometry I,Avi,QL3375,Thursday,SHF-0387,1:00 p.m.,4:00 p.m.,Library
+MATH 151,Math,Calculus and Analytic Geometry I,Shrikant,AX5334,Thursday,SHF-0388,3:00 p.m.,4:00 p.m.,Library
+MATH 151,Math,Calculus and Analytic Geometry I,Akanksha,BE9053,Thursday,SHF-0389,3:00 p.m.,5:00 p.m.,Library
+MATH 151,Math,Calculus and Analytic Geometry I,Zach,ZJ7616,Thursday,SHF-0390,3:30 p.m.,5:00 p.m.,Library
+MATH 151,Math,Calculus and Analytic Geometry I,Karen,KA0415,Thursday,SHF-0391,4:00 p.m.,5:00 p.m.,Library
+MATH 151,Math,Calculus and Analytic Geometry I,Himani,HL9712,Thursday,SHF-0392,5:00 p.m.,6:00 p.m.,Library
+MATH 151,Math,Calculus and Analytic Geometry I,Kodi,ZW5148,Thursday,SHF-0393,5:00 p.m.,6:00 p.m.,Library
+MATH 151,Math,Calculus and Analytic Geometry I,Shrikant,AX5334,Thursday,SHF-0394,5:00 p.m.,6:00 p.m.,Library
+MATH 151,Math,Calculus and Analytic Geometry I,Zach,ZJ7616,Friday,SHF-0395,11:00 a.m.,Noon,Library
+MATH 151,Math,Calculus and Analytic Geometry I,Aren,RU5618,Friday,SHF-0396,11:00 a.m.,1:00 p.m.,Library
+MATH 151,Math,Calculus and Analytic Geometry I,Shrikant,AX5334,Friday,SHF-0397,11:00 a.m.,2:00 p.m.,Library
+MATH 151,Math,Calculus and Analytic Geometry I,Karen,KA0415,Friday,SHF-0398,11:30 a.m.,1:30 p.m.,Library
+MATH 151,Math,Calculus and Analytic Geometry I,Himani,HL9712,Friday,SHF-0399,12:00 p.m.,1:00 p.m.,Library
+MATH 151,Math,Calculus and Analytic Geometry I,Shayan,VF3828,Friday,SHF-0400,1:00 p.m.,2:00 p.m.,Library
+MATH 151,Math,Calculus and Analytic Geometry I,Molemo,AL2865,Friday,SHF-0401,1:00 p.m.,2: 00 p.m.,Library
+MATH 152,Math,Calculus and Analytic Geometry II,Rania,GB3977,Monday,SHF-0402,11:00 a.m.,Noon,Library
+MATH 152,Math,Calculus and Analytic Geometry II,Akanksha,BE9053,Monday,SHF-0403,11:00 a.m.,Noon,Library
+MATH 152,Math,Calculus and Analytic Geometry II,Shrikant,AX5334,Monday,SHF-0404,11:00 a.m.,1:00 p.m.,Library
+MATH 152,Math,Calculus and Analytic Geometry II,Michael,RH2160,Monday,SHF-0405,11:30 a.m.,12:45 p.m.,Library
+MATH 152,Math,Calculus and Analytic Geometry II,O'Tega,AL2254,Monday,SHF-0406,12:30 p.m.,2:00 p.m.,Library
+MATH 152,Math,Calculus and Analytic Geometry II,Abe,JB9431,Monday,SHF-0407,2:30 p.m.,3:30 p.m.,Library
+MATH 152,Math,Calculus and Analytic Geometry II,Rania,GB3977,Monday,SHF-0408,4:00 p.m.,5:00 p.m.,Library
+MATH 152,Math,Calculus and Analytic Geometry II,Molly,VA5523,Monday,SHF-0409,4:00 p.m.,6:00 p.m.,Library
+MATH 152,Math,Calculus and Analytic Geometry II,O'Tega,AL2254,Monday,SHF-0410,4:00 p.m.,6:00 p.m.,Library
+MATH 152,Math,Calculus and Analytic Geometry II,Michael,RH2160,Tuesday,SHF-0411,11:00 a.m.,12:30 p.m.,Library
+MATH 152,Math,Calculus and Analytic Geometry II,Shrikant,AX5334,Tuesday,SHF-0412,1:00 p.m.,2:00 p.m.,Library
+MATH 152,Math,Calculus and Analytic Geometry II,Aren,RU5618,Tuesday,SHF-0413,1:30 p.m.,5:00 p.m.,Library
+MATH 152,Math,Calculus and Analytic Geometry II,Abe,JB9431,Tuesday,SHF-0414,2:00 p.m.,3:00 p.m.,Library
+MATH 152,Math,Calculus and Analytic Geometry II,Shrikant,AX5334,Tuesday,SHF-0415,2:45 p.m.,3:45 p.m.,Library
+MATH 152,Math,Calculus and Analytic Geometry II,Akanksha,BE9053,Tuesday,SHF-0416,3:00 p.m.,4:30 p.m.,Library
+MATH 152,Math,Calculus and Analytic Geometry II,Karen,KA0415,Tuesday,SHF-0417,4:00 p.m.,5:00 p.m.,Library
+MATH 152,Math,Calculus and Analytic Geometry II,Shrikant,AX5334,Wednesday,SHF-0418,11:00 a.m.,Noon,Library
+MATH 152,Math,Calculus and Analytic Geometry II,Michael,RH2160,Wednesday,SHF-0419,11:15 a.m.,12:45 p.m.,Library
+MATH 152,Math,Calculus and Analytic Geometry II,Molemo,AL2865,Wednesday,SHF-0420,Noon,2:00 p.m.,Library
+MATH 152,Math,Calculus and Analytic Geometry II,Akanksha,BE9053,Wednesday,SHF-0421,1:00 p.m.,2:00 p.m.,Library
+MATH 152,Math,Calculus and Analytic Geometry II,Shayan,VF3828,Wednesday,SHF-0422,2:00 p.m.,4:30 p.m.,Library
+MATH 152,Math,Calculus and Analytic Geometry II,Abe,JB9431,Wednesday,SHF-0423,2:30 p.m.,3:30 p.m.,Library
+MATH 152,Math,Calculus and Analytic Geometry II,Zach,ZJ7616,Wednesday,SHF-0424,3:00 p.m.,5:00 p.m.,Library
+MATH 152,Math,Calculus and Analytic Geometry II,Molly,VA5523,Wednesday,SHF-0425,4:00 p.m.,6:00 p.m.,Library
+MATH 152,Math,Calculus and Analytic Geometry II,Shrikant,AX5334,Thursday,SHF-0426,3:00 p.m.,4:00 p.m.,Library
+MATH 152,Math,Calculus and Analytic Geometry II,Zach,ZJ7616,Thursday,SHF-0427,3:00 p.m.,5:00 p.m.,Library
+MATH 152,Math,Calculus and Analytic Geometry II,Akanksha,BE9053,Thursday,SHF-0428,3:00 p.m.,5:00 p.m.,Library
+MATH 152,Math,Calculus and Analytic Geometry II,Zach,ZJ7616,Thursday,SHF-0429,3:30 p.m.,5:00 p.m.,Library
+MATH 152,Math,Calculus and Analytic Geometry II,Karen,KA0415,Thursday,SHF-0430,4:00 p.m.,5:00 p.m.,Library
+MATH 152,Math,Calculus and Analytic Geometry II,Shrikant,AX5334,Thursday,SHF-0431,5:00 p.m.,6:00 p.m.,Library
+MATH 152,Math,Calculus and Analytic Geometry II,Zach,ZJ7616,Friday,SHF-0432,11:00 a.m.,Noon,Library
+MATH 152,Math,Calculus and Analytic Geometry II,Aren,RU5618,Friday,SHF-0433,11:00 a.m.,1:00 p.m.,Library
+MATH 152,Math,Calculus and Analytic Geometry II,Shrikant,AX5334,Friday,SHF-0434,11:00 a.m.,2:00 p.m.,Library
+MATH 152,Math,Calculus and Analytic Geometry II,Karen,KA0415,Friday,SHF-0435,11:30 a.m.,1:30 p.m.,Library
+MATH 152,Math,Calculus and Analytic Geometry II,Shayan,VF3828,Friday,SHF-0436,1:00 p.m.,2:00 p.m.,Library
+MATH 152,Math,Calculus and Analytic Geometry II,Molemo,AL2865,Friday,SHF-0437,1:00 p.m.,2: 00 p.m.,Library
+MATH 155,Math,Applied Calculus,Ini,NA2919,Monday,SHF-0438,1:00 p.m.,2:30 p.m.,Library
+MATH 155,Math,Applied Calculus,Adamo,SL6799,Monday,SHF-0439,2:30 p.m.,4:00 p.m.,Library
+MATH 155,Math,Applied Calculus,Manav,CV7875,Tuesday,SHF-0440,11:30 a.m.,1:30 p.m.,Library
+MATH 155,Math,Applied Calculus,Shakib,VV7352,Tuesday,SHF-0441,Noon,2:00 p.m.,Library
+MATH 155,Math,Applied Calculus,Karen,KA0415,Tuesday,SHF-0442,4:00 p.m.,5:00 p.m.,Library
+MATH 155,Math,Applied Calculus,Manav,CV7875,Wednesday,SHF-0443,11:30 a.m.,1:00 p.m.,Library
+MATH 155,Math,Applied Calculus,Manav,CV7875,Thursday,SHF-0444,11:30 a.m.,12:30 p.m.,Library
+MATH 155,Math,Applied Calculus,Shakib,VV7352,Thursday,SHF-0445,12:30 p.m.,2:00 p.m.,Library
+MATH 155,Math,Applied Calculus,Avi,QL3375,Thursday,SHF-0446,1:00 p.m.,4:00 p.m.,Library
+MATH 155,Math,Applied Calculus,Ini,NA2919,Thursday,SHF-0447,1:30 p.m.,2:30 p.m.,Library
+MATH 155,Math,Applied Calculus,Karen,KA0415,Thursday,SHF-0448,4:00 p.m.,5:00 p.m.,Library
+MATH 155,Math,Applied Calculus,Adamo,SL6799,Thursday,SHF-0449,4:00 p.m.,6:00 p.m.,Library
+MATH 155,Math,Applied Calculus,Karen,KA0415,Friday,SHF-0450,11:30 a.m.,1:30 p.m.,Library
+MATH 215,Math,Applied Finite Mathematics,Avi,QL3375,Thursday,SHF-0451,1:00 p.m.,4:00 p.m.,Library
+MATH 221,Math,Introduction to Linear Algebra,Akanksha,BE9053,Monday,SHF-0452,11:00 a.m.,Noon,Library
+MATH 221,Math,Introduction to Linear Algebra,Michael,RH2160,Monday,SHF-0453,11:30 a.m.,12:45 p.m.,Library
+MATH 221,Math,Introduction to Linear Algebra,Abe,JB9431,Monday,SHF-0454,2:30 p.m.,3:30 p.m.,Library
+MATH 221,Math,Introduction to Linear Algebra,Molly,VA5523,Monday,SHF-0455,4:00 p.m.,6:00 p.m.,Library
+MATH 221,Math,Introduction to Linear Algebra,Michael,RH2160,Tuesday,SHF-0456,11:00 a.m.,12:30 p.m.,Library
+MATH 221,Math,Introduction to Linear Algebra,Aren,RU5618,Tuesday,SHF-0457,1:30 p.m.,5:00 p.m.,Library
+MATH 221,Math,Introduction to Linear Algebra,Abe,JB9431,Tuesday,SHF-0458,2:00 p.m.,3:00 p.m.,Library
+MATH 221,Math,Introduction to Linear Algebra,Akanksha,BE9053,Tuesday,SHF-0459,3:00 p.m.,4:30 p.m.,Library
+MATH 221,Math,Introduction to Linear Algebra,Michael,RH2160,Wednesday,SHF-0460,11:15 a.m.,12:45 p.m.,Library
+MATH 221,Math,Introduction to Linear Algebra,Akanksha,BE9053,Wednesday,SHF-0461,1:00 p.m.,2:00 p.m.,Library
+MATH 221,Math,Introduction to Linear Algebra,Abe,JB9431,Wednesday,SHF-0462,2:30 p.m.,3:30 p.m.,Library
+MATH 221,Math,Introduction to Linear Algebra,Molly,VA5523,Wednesday,SHF-0463,4:00 p.m.,6:00 p.m.,Library
+MATH 221,Math,Introduction to Linear Algebra,Akanksha,BE9053,Thursday,SHF-0464,3:00 p.m.,5:00 p.m.,Library
+MATH 221,Math,Introduction to Linear Algebra,Aren,RU5618,Friday,SHF-0465,11:00 a.m.,1:00 p.m.,Library
+MATH 225,Math,Introduction to Differential Equations,Michael,RH2160,Monday,SHF-0466,11:30 a.m.,12:45 p.m.,Library
+MATH 225,Math,Introduction to Differential Equations,Abe,JB9431,Monday,SHF-0467,2:30 p.m.,3:30 p.m.,Library
+MATH 225,Math,Introduction to Differential Equations,Michael,RH2160,Tuesday,SHF-0468,11:00 a.m.,12:30 p.m.,Library
+MATH 225,Math,Introduction to Differential Equations,Aren,RU5618,Tuesday,SHF-0469,1:30 p.m.,5:00 p.m.,Library
+MATH 225,Math,Introduction to Differential Equations,Abe,JB9431,Tuesday,SHF-0470,2:00 p.m.,3:00 p.m.,Library
+MATH 225,Math,Introduction to Differential Equations,Kodi,ZW5148,Tuesday,SHF-0471,5:00 p.m.,6:00 p.m.,Library
+MATH 225,Math,Introduction to Differential Equations,Michael,RH2160,Wednesday,SHF-0472,11:15 a.m.,12:45 p.m.,Library
+MATH 225,Math,Introduction to Differential Equations,Molemo,AL2865,Wednesday,SHF-0473,12:00 p.m.,2:00 p.m.,Library
+MATH 225,Math,Introduction to Differential Equations,Abe,JB9431,Wednesday,SHF-0474,2:30 p.m.,3:30 p.m.,Library
+MATH 225,Math,Introduction to Differential Equations,Kodi,ZW5148,Thursday,SHF-0475,1:00 p.m.,2:00 p.m.,Library
+MATH 225,Math,Introduction to Differential Equations,Kodi,ZW5148,Thursday,SHF-0476,5:00 p.m.,6:00 p.m.,Library
+MATH 225,Math,Introduction to Differential Equations,Aren,RU5618,Friday,SHF-0477,11:00 a.m.,1:00 p.m.,Library
+MATH 225,Math,Introduction to Differential Equations,Molemo,AL2865,Friday,SHF-0478,1:00 p.m.,2:00 p.m.,Library
+MATH 251,Math,Multivariable Calculus,Rania,GB3977,Monday,SHF-0479,11:00 a.m.,Noon,Library
+MATH 251,Math,Multivariable Calculus,Akanksha,BE9053,Monday,SHF-0480,11:00 a.m.,Noon,Library
+MATH 251,Math,Multivariable Calculus,Michael,RH2160,Monday,SHF-0481,11:30 a.m.,12:45 p.m.,Library
+MATH 251,Math,Multivariable Calculus,Rania,GB3977,Monday,SHF-0482,4:00 p.m.,5:00 p.m.,Library
+MATH 251,Math,Multivariable Calculus,Molly,VA5523,Monday,SHF-0483,4:00 p.m.,6:00 p.m.,Library
+MATH 251,Math,Multivariable Calculus,Michael,RH2160,Tuesday,SHF-0484,11:00 a.m.,12:30 p.m.,Library
+MATH 251,Math,Multivariable Calculus,Akanksha,BE9053,Tuesday,SHF-0485,3:00 p.m.,4:30 p.m.,Library
+MATH 251,Math,Multivariable Calculus,Michael,RH2160,Wednesday,SHF-0486,11:15 a.m.,12:45 p.m.,Library
+MATH 251,Math,Multivariable Calculus,Molemo,AL2865,Wednesday,SHF-0487,12:00 p.m.,2:00 p.m.,Library
+MATH 251,Math,Multivariable Calculus,Akanksha,BE9053,Wednesday,SHF-0488,1:00 p.m.,2:00 p.m.,Library
+MATH 251,Math,Multivariable Calculus,Molly,VA5523,Wednesday,SHF-0489,4:00 p.m.,6:00 p.m.,Library
+MATH 251,Math,Multivariable Calculus,Akanksha,BE9053,Thursday,SHF-0490,3:00 p.m.,5:00 p.m.,Library
+MATH 251,Math,Multivariable Calculus,Molemo,AL2865,Friday,SHF-0491,1:00 p.m.,2:00 p.m.,Library
+MATH 300,Math,Introduction to Mathematical Reasoning,Akanksha,BE9053,Monday,SHF-0492,11:00 a.m.,12:00 p.m.,Library
+MATH 300,Math,Introduction to Mathematical Reasoning,Aren,RU5618,Tuesday,SHF-0493,1:30 p.m.,5:00 p.m.,Library
+MATH 300,Math,Introduction to Mathematical Reasoning,Akanksha,BE9053,Tuesday,SHF-0494,3:00 p.m.,4:30 p.m.,Library
+MATH 300,Math,Introduction to Mathematical Reasoning,Akanksha,BE9053,Wednesday,SHF-0495,1:00 p.m.,2:00 p.m.,Library
+MATH 300,Math,Introduction to Mathematical Reasoning,Avi,QL3375,Thursday,SHF-0496,1:00 p.m.,4:00 p.m.,Library
+MATH 300,Math,Introduction to Mathematical Reasoning,Akanksha,BE9053,Thursday,SHF-0497,3:00 p.m.,5:00 p.m.,Library
+MATH 300,Math,Introduction to Mathematical Reasoning,Aren,RU5618,Friday,SHF-0498,11:00 a.m.,1:00 p.m.,Library
+MATH 301,Math,Introduction to Contemporary Mathematics,Avi,QL3375,Thursday,SHF-0499,1:00 p.m.,4:00 p.m.,Library
+PHYS 111,Physics,Basic Physics I,Susanna,FA9365,Monday,SHF-0500,11:00 a.m.,1:00 p.m.,Library
+PHYS 111,Physics,Basic Physics I,Shrikant,AX5334,Monday,SHF-0501,11:00 a.m.,1:00 p.m.,Library
+PHYS 111,Physics,Basic Physics I,O'Tega,AL2254,Monday,SHF-0502,12:30 p.m.,2:00 p.m.,Library
+PHYS 111,Physics,Basic Physics I,O'Tega,AL2254,Monday,SHF-0503,4:00 p.m.,6:00 p.m.,Library
+PHYS 111,Physics,Basic Physics I,Shrikant,AX5334,Tuesday,SHF-0504,1:00 p.m.,2:00 p.m.,Library
+PHYS 111,Physics,Basic Physics I,Aren,RU5618,Tuesday,SHF-0505,1:30 p.m.,5:00 p.m.,Library
+PHYS 111,Physics,Basic Physics I,Shrikant,AX5334,Tuesday,SHF-0506,2:45 p.m.,3:45 p.m.,Library
+PHYS 111,Physics,Basic Physics I,Kodi,ZW5148,Tuesday,SHF-0507,5:00 p.m.,6:00 p.m.,Library
+PHYS 111,Physics,Basic Physics I,Shrikant,AX5334,Wednesday,SHF-0508,11:00 a.m.,Noon,Library
+PHYS 111,Physics,Basic Physics I,Zach,ZJ7616,Wednesday,SHF-0509,3:30 p.m.,5:00 p.m.,Library
+PHYS 111,Physics,Basic Physics I,Kodi,ZW5148,Thursday,SHF-0510,1:00 p.m.,2:00 p.m.,Library
+PHYS 111,Physics,Basic Physics I,Avi,QL3375,Thursday,SHF-0511,1:00 p.m.,4:00 p.m.,Library
+PHYS 111,Physics,Basic Physics I,Shrikant,AX5334,Thursday,SHF-0512,3:00 p.m.,4:00 p.m.,Library
+PHYS 111,Physics,Basic Physics I,Zach,ZJ7616,Thursday,SHF-0513,3:30 p.m.,5:00 p.m.,Library
+PHYS 111,Physics,Basic Physics I,Himani,HL9712,Thursday,SHF-0514,5:00 p.m.,6:00 p.m.,Library
+PHYS 111,Physics,Basic Physics I,Kodi,ZW5148,Thursday,SHF-0515,5:00 p.m.,6:00 p.m.,Library
+PHYS 111,Physics,Basic Physics I,Shrikant,AX5334,Thursday,SHF-0516,5:00 p.m.,6:00 p.m.,Library
+PHYS 111,Physics,Basic Physics I,Zach,ZJ7616,Friday,SHF-0517,11:00 a.m.,12:00 p.m.,Library
+PHYS 111,Physics,Basic Physics I,Aren,RU5618,Friday,SHF-0518,11:00 a.m.,1:00 p.m.,Library
+PHYS 111,Physics,Basic Physics I,Shrikant,AX5334,Friday,SHF-0519,11:00 a.m.,2:00 p.m.,Library
+PHYS 111,Physics,Basic Physics I,Himani,HL9712,Friday,SHF-0520,12:00 p.m.,1:00 p.m.,Library
+PHYS 112,Physics,Basic Physics II,O'Tega,AL2254,Monday,SHF-0521,12:30 p.m.,2:00 p.m.,Library
+PHYS 112,Physics,Basic Physics II,O'Tega,AL2254,Monday,SHF-0522,4:00 p.m.,6:00 p.m.,Library
+PHYS 112,Physics,Basic Physics II,Kodi,ZW5148,Tuesday,SHF-0523,5:00 p.m.,6:00 p.m.,Library
+PHYS 112,Physics,Basic Physics II,Kodi,ZW5148,Thursday,SHF-0524,1:00 p.m.,2:00 p.m.,Library
+PHYS 112,Physics,Basic Physics II,Kodi,ZW5148,Thursday,SHF-0525,5:00 p.m.,6:00 p.m.,Library
+PHYS 121,Physics,Introductory Physics I,Shrikant,AX5334,Monday,SHF-0526,11:00 a.m.,1:00 p.m.,Library
+PHYS 121,Physics,Introductory Physics I,O'Tega,AL2254,Monday,SHF-0527,12:30 p.m.,2:00 p.m.,Library
+PHYS 121,Physics,Introductory Physics I,Dani,GI7803,Monday,SHF-0528,2:00 p.m.,4:00 p.m.,Library
+PHYS 121,Physics,Introductory Physics I,O'Tega,AL2254,Monday,SHF-0529,4:00 p.m.,6:00 p.m.,Library
+PHYS 121,Physics,Introductory Physics I,Shrikant,AX5334,Tuesday,SHF-0530,1:00 p.m.,2:00 p.m.,Library
+PHYS 121,Physics,Introductory Physics I,Aren,RU5618,Tuesday,SHF-0531,1:30 p.m.,5:00 p.m.,Library
+PHYS 121,Physics,Introductory Physics I,Shrikant,AX5334,Tuesday,SHF-0532,2:45 p.m.,3:45 p.m.,Library
+PHYS 121,Physics,Introductory Physics I,Kodi,ZW5148,Tuesday,SHF-0533,5:00 p.m.,6:00 p.m.,Library
+PHYS 121,Physics,Introductory Physics I,Shrikant,AX5334,Wednesday,SHF-0534,11:00 a.m.,Noon,Library
+PHYS 121,Physics,Introductory Physics I,Dani,GI7803,Wednesday,SHF-0535,2:00 p.m.,4:00 p.m.,Library
+PHYS 121,Physics,Introductory Physics I,Zach,ZJ7616,Wednesday,SHF-0536,3:00 p.m.,5:00 p.m.,Library
+PHYS 121,Physics,Introductory Physics I,Kodi,ZW5148,Thursday,SHF-0537,1:00 p.m.,2:00 p.m.,Library
+PHYS 121,Physics,Introductory Physics I,Avi,QL3375,Thursday,SHF-0538,1:00 p.m.,4:00 p.m.,Library
+PHYS 121,Physics,Introductory Physics I,Shrikant,AX5334,Thursday,SHF-0539,3:00 p.m.,4:00 p.m.,Library
+PHYS 121,Physics,Introductory Physics I,Zach,ZJ7616,Thursday,SHF-0540,3:30 p.m.,5:00 p.m.,Library
+PHYS 121,Physics,Introductory Physics I,Kodi,ZW5148,Thursday,SHF-0541,5:00 p.m.,6:00 p.m.,Library
+PHYS 121,Physics,Introductory Physics I,Shrikant,AX5334,Thursday,SHF-0542,5:00 p.m.,6:00 p.m.,Library
+PHYS 121,Physics,Introductory Physics I,Zach,ZJ7616,Friday,SHF-0543,11:00 a.m.,12:00 p.m.,Library
+PHYS 121,Physics,Introductory Physics I,Aren,RU5618,Friday,SHF-0544,11:00 a.m.,1:00 p.m.,Library
+PHYS 121,Physics,Introductory Physics I,Shrikant,AX5334,Friday,SHF-0545,11:00 a.m.,2:00 p.m.,Library
+PHYS 122,Physics,Introductory Physics II,Shrikant,AX5334,Monday,SHF-0546,11:00 a.m.,1:00 p.m.,Library
+PHYS 122,Physics,Introductory Physics II,O'Tega,AL2254,Monday,SHF-0547,12:30 p.m.,2:00 p.m.,Library
+PHYS 122,Physics,Introductory Physics II,Abe,JB9431,Monday,SHF-0548,2:30 p.m.,3:30 p.m.,Library
+PHYS 122,Physics,Introductory Physics II,O'Tega,AL2254,Monday,SHF-0549,4:00 p.m.,6:00 p.m.,Library
+PHYS 122,Physics,Introductory Physics II,Shrikant,AX5334,Tuesday,SHF-0550,1:00 p.m.,2:00 p.m.,Library
+PHYS 122,Physics,Introductory Physics II,Abe,JB9431,Tuesday,SHF-0551,2:00 p.m.,3:00 p.m.,Library
+PHYS 122,Physics,Introductory Physics II,Shrikant,AX5334,Tuesday,SHF-0552,2:45 p.m.,3:45 p.m.,Library
+PHYS 122,Physics,Introductory Physics II,Kodi,ZW5148,Tuesday,SHF-0553,5:00 p.m.,6:00 p.m.,Library
+PHYS 122,Physics,Introductory Physics II,Shrikant,AX5334,Wednesday,SHF-0554,11:00 a.m.,Noon,Library
+PHYS 122,Physics,Introductory Physics II,Abe,JB9431,Wednesday,SHF-0555,2:30 p.m.,3:30 p.m.,Library
+PHYS 122,Physics,Introductory Physics II,Kodi,ZW5148,Thursday,SHF-0556,1:00 p.m.,2:00 p.m.,Library
+PHYS 122,Physics,Introductory Physics II,Shrikant,AX5334,Thursday,SHF-0557,3:00 p.m.,4:00 p.m.,Library
+PHYS 122,Physics,Introductory Physics II,Kodi,ZW5148,Thursday,SHF-0558,5:00 p.m.,6:00 p.m.,Library
+PHYS 122,Physics,Introductory Physics II,Shrikant,AX5334,Thursday,SHF-0559,5:00 p.m.,6:00 p.m.,Library
+PHYS 122,Physics,Introductory Physics II,Shrikant,AX5334,Friday,SHF-0560,11:00 a.m.,2:00 p.m.,Library
+SCI 100,Science,Science of Water; An Interdisciplinary Study,Ini,NA2919,Monday,SHF-0561,1:00 p.m.,2:30 p.m.,Library
+SCI 100,Science,Science of Water; An Interdisciplinary Study,Ini,NA2919,Thursday,SHF-0562,1:30 p.m.,2:30 p.m.,Library
+SPAN 101,Spanish,Elementary Spanish I,Chiara,UC7257,Thursday,SHF-0563,3:00 p.m.,4:00 p.m.,Library
+SPAN 102,Spanish,Elementary Spanish II,Chiara,UC7257,Thursday,SHF-0564,3:00 p.m.,4:00 p.m.,Library
+SPAN 201,Spanish,Intermediate Spanish I,Chiara,UC7257,Thursday,SHF-0565,3:00 p.m.,4:00 p.m.,Library
+SPAN 202,Spanish,Intermediate Spanish II,Chiara,UC7257,Thursday,SHF-0566,3:00 p.m.,4:00 p.m.,Library
+STAT 121,Statistics,Introduction to Statistics for the Social Sciences,O'Tega,AL2254,Monday,SHF-0567,12:30 a.m.,2:00 p.m.,Library
+STAT 121,Statistics,Introduction to Statistics for the Social Sciences,O'Tega,AL2254,Monday,SHF-0568,4:00 p.m.,6:00 p.m.,Library
+STAT 121,Statistics,Introduction to Statistics for the Social Sciences,Chelsea,FZ0230,Tuesday,SHF-0569,12:30 p.m.,1:30 p.m.,Library
+STAT 121,Statistics,Introduction to Statistics for the Social Sciences,Moyo,CN4017,Tuesday,SHF-0570,5:00 p.m.,6:00 p.m.,Library
+STAT 121,Statistics,Introduction to Statistics for the Social Sciences,Joseph,YV6897,Wednesday,SHF-0571,12:45 p.m.,2:30 p.m.,Library
+STAT 121,Statistics,Introduction to Statistics for the Social Sciences,Moyo,CN4017,Wednesday,SHF-0572,5:00 p.m.,6:00 p.m.,Library
+STAT 121,Statistics,Introduction to Statistics for the Social Sciences,Avi,QL3375,Thursday,SHF-0573,1:00 p.m.,4:00 p.m.,Library
+STAT 350,Statistics,Statistics with Applications in the Biological Sciences,Dani,GI7803,Monday,SHF-0574,2:00 p.m.,4:00 p.m.,Library
+STAT 350,Statistics,Statistics with Applications in the Biological Sciences,Karen,KA0415,Tuesday,SHF-0575,4:00 p.m.,5:00 p.m.,Library
+STAT 350,Statistics,Statistics with Applications in the Biological Sciences,Dani,GI7803,Wednesday,SHF-0576,2:00 p.m.,4:00 p.m.,Library
+STAT 350,Statistics,Statistics with Applications in the Biological Sciences,Avi,QL3375,Thursday,SHF-0577,1:00 p.m.,4:00 p.m.,Library
+STAT 350,Statistics,Statistics with Applications in the Biological Sciences,Karen,KA0415,Thursday,SHF-0578,5:00 p.m.,6:00 p.m.,Library
+STAT 350,Statistics,Statistics with Applications in the Biological Sciences,Karen,KA0415,Friday,SHF-0579,11:30 a.m.,1:30 p.m.,Library
+STAT 351,Statistics,Applied Statistics for Business and Economics,Dani,GI7803,Monday,SHF-0580,2:00 p.m.,4:00 p.m.,Library
+STAT 351,Statistics,Applied Statistics for Business and Economics,Dani,GI7803,Wednesday,SHF-0581,2:00 p.m.,4:00 p.m.,Library
+STAT 351,Statistics,Applied Statistics for Business and Economics,Avi,QL3375,Thursday,SHF-0582,1:00 p.m.,4:00 p.m.,Library
+STAT 355,Statistics,"Introduction to Probability and Statistics for Scientists
+            and Engineers",Akanksha,BE9053,Monday,SHF-0583,11:00 a.m.,12:00 p.m.,Library
+STAT 355,Statistics,"Introduction to Probability and Statistics for Scientists
+            and Engineers",Dani,GI7803,Monday,SHF-0584,2:00 p.m.,4:00 p.m.,Library
+STAT 355,Statistics,"Introduction to Probability and Statistics for Scientists
+            and Engineers",Akanksha,BE9053,Tuesday,SHF-0585,3:00 p.m.,4:30 p.m.,Library
+STAT 355,Statistics,"Introduction to Probability and Statistics for Scientists
+            and Engineers",Akanksha,BE9053,Wednesday,SHF-0586,1:00 p.m.,2:00 p.m.,Library
+STAT 355,Statistics,"Introduction to Probability and Statistics for Scientists
+            and Engineers",Dani,GI7803,Wednesday,SHF-0587,2:00 p.m.,4:00 p.m.,Library
+STAT 355,Statistics,"Introduction to Probability and Statistics for Scientists
+            and Engineers",Avi,QL3375,Thursday,SHF-0588,1:00 p.m.,4:00 p.m.,Library
+STAT 355,Statistics,"Introduction to Probability and Statistics for Scientists
+            and Engineers",Akanksha,BE9053,Thursday,SHF-0589,3:00 p.m.,5:00 p.m.,Library
