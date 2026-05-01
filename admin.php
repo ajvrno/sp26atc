@@ -87,9 +87,10 @@ if (mysqli_connect_errno()) {
       text-align: center;
       width: 83%;
       margin: 40px auto;
-      margin-top: -10px;
+      margin-top: 20px;
       border-radius: 10px;
       padding: 35px;
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
     }
 
     .section {
