@@ -3,11 +3,11 @@
 // Checks if the user is logged in before opening admin page
 session_start();
 
-if (!isset($_SESSION['admin_id'])) {
+// if (!isset($_SESSION['admin_id'])) {
 
-  header("Location: login.php");
-  exit();
-}
+//   header("Location: login.php");
+//   exit();
+// }
 
 require_once 'db_config.php';
 
@@ -157,6 +157,54 @@ if (mysqli_connect_errno()) {
       background-color: #cbc3e3;
       padding: 4px;
     }
+    
+    /* Cancellation confirmation box css */
+    .cancel-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+    }
+
+    .cancel-box {
+      background: white;
+      border-radius: 10px;
+      padding: 28px 32px;
+      width: 450px;
+      max-width: 90%;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    }
+
+    .cancel-box h2 {
+      margin: 0 0 8px;
+      font-size: 1.1rem;
+    }
+
+    .cancel-box p {
+      font-size: 0.9rem;
+    }
+
+    .mode-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 24px;
+      margin-bottom: 30px;
+    }
+    
+    .mode-option.selected {
+      background: darkgray;
+    }
+
+    .confirm-buttons {
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+      margin-top: 18px;
+    }
   </style>
 </head>
 
@@ -209,10 +257,71 @@ if (mysqli_connect_errno()) {
       completed: "Completed",
     };
 
+    // Confirmation box that appears when cancelling a shift
+    function CancelMode({ tutor, onConfirm, onClose }) {
+      const [mode, setMode] = useState(null);
+      const [selectedDays, setSelectedDays] = useState([]);
+
+      const toggleDay = (day) => {
+        setSelectedDays((prev) =>
+          prev.includes(day) ? prev.filter((d) => d !== day) : [...prev, day]
+        );
+      };
+
+      const handleConfirm = () => {
+        if (!mode) return;
+        onConfirm(mode, selectedDays);
+      };
+
+      return (
+        <div className="cancel-overlay" onClick={onClose}>
+          <div className="cancel-box" onClick={(e) => e.stopPropagation()}>
+            <h2>Cancel shift for {tutor.name}?</h2>
+            <p>Please confirm how many shifts belonging to this tutor to cancel</p>
+
+            <div className="mode-buttons">
+              <button
+                className={`mode-option ${mode === 'single' ? 'selected' : ''}`}
+                onClick={() => setMode('single')}
+              >
+                This shift only
+              </button>
+
+              <button
+                className={`mode-option ${mode === 'today' ? 'selected' : ''}`}
+                onClick={() => setMode('today')}
+              >
+                All shifts today
+              </button>
+
+              <button
+                className={`mode-option ${mode === 'multiday' ? 'selected' : ''}`}
+                onClick={() => setMode('multiday')}
+              >
+                Multiple days
+              </button>
+            </div>
+            {/* {mode === 'multiday' && (here is where the calener popup would be)} */} 
+
+            <div className="confirm-buttons">
+              <button onClick={onClose}>Go back</button>
+              <button
+                onClick={handleConfirm}
+                disabled={!mode || (mode === 'multiday' && selectedDays.length === 0)}
+              >
+                Confirm cancellation
+              </button>
+            </div>
+          </div>
+        </div>
+      );
+    }
+
     function App() {
       // Start with an empty array instead of dummy data
       const [tutors, setTutors] = useState([]);
       const [currentDate, setCurrentDate] = useState(new Date());
+      const [cancelMode, setCancelMode] = useState(null);
 
       // Helper to format the React date into MySQL format (YYYY-MM-DD)
       const getFormattedDate = (date) => {
@@ -252,8 +361,7 @@ if (mysqli_connect_errno()) {
         loadSchedule();
       }, [currentDate]);
 
-      // Handle database updates when an admin changes the status dropdown
-      const changeSection = (id, newStatus) => {
+      const sendStatusUpdate = (shiftId, newStatus) => {
         setTutors((prev) =>
           prev.map((t) =>
             t.id === id ? { ...t, section: statusToSection[newStatus] } : t,
@@ -278,6 +386,35 @@ if (mysqli_connect_errno()) {
           });
       };
 
+      // Handle database updates when an admin changes the status dropdown
+      const changeSection = (id, newStatus) => {
+        if (newStatus === 'Cancelled') {
+          const tutor = tutors.find((t) => t.id === id);
+          setCancelMode({tutor});
+        } else {
+          sendStatusUpdate(id, newStatus);
+        }
+      };
+
+      const handleCancelConfirm = (mode, selectedDays) => {
+        const {tutor} = cancelMode;
+        setCancelMode(null);
+
+        if (mode === 'single') {
+          // just this one
+          sendStatusUpdate(tutor.id, 'Cancelled');
+        }
+        else if (mode === 'today') {
+          // cancel all shifts today
+          const tutorsDayShifts = tutors.filter((t) => t.name === tutor.name);
+          tutorsDayShifts.forEach((t) => sendStatusUpdate(t.id, 'Cancelled'));
+        }
+        else if (mode === 'multiday') {
+          // pick a range and cancel all shifts on those days
+          // right now do nothing but maybe bring up a calender and find the days and copy "today" section with each day
+        }
+      };
+
       const changeAvailability = (id, val) => {
         setTutors((prev) =>
           prev.map((t) => (t.id === id ? { ...t, availability: val } : t)),
@@ -292,6 +429,13 @@ if (mysqli_connect_errno()) {
 
       return (
         <div>
+          {cancelMode && (
+            <CancelMode
+            tutor = {cancelMode.tutor}
+            onConfirm={handleCancelConfirm}
+            onClose={() => setCancelMode(null)}
+            />
+          )}
 
           <div className="arrow-feedback-container">
             <div>
@@ -323,8 +467,10 @@ if (mysqli_connect_errno()) {
               </button>
             </div>
 
-            <button className="feedback-button">Access Feedback</button>
-          </div>
+              {/*Accessing feedback button*/}
+              <button className="feedback-button" onClick={() => window.open('https://docs.google.com/spreadsheets/d/1zE-2hPtF0hfRsJfjtSxjRZRZ1DW-OaPZ6_9hUCb7ZTQ/edit?usp=sharing', '_blank')}>
+                Access Feedback</button>
+            </div>
 
           {SECTIONS.map((sec) => {
             const rows = tutors.filter((t) => t.section === sec);

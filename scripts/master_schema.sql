@@ -12,7 +12,7 @@ DROP TABLE IF EXISTS tutor_course;
 DROP TABLE IF EXISTS shift;
 DROP TABLE IF EXISTS course;
 DROP TABLE IF EXISTS tutors;
-DROP TABLE IF EXISTS admin;
+DROP TABLE IF EXISTS admins;
 
 -- ==============================================================================
 -- 2. Create Core Tables (No Foreign Keys)
@@ -72,3 +72,4 @@ CREATE TABLE status (
     status_state enum('Upcoming', 'Active', 'Late', 'Full', 'Cancelled') DEFAULT 'Upcoming',
     admin_id VARCHAR(50) NULL,
     last_updated TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
