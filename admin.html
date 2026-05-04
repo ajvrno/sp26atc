@@ -42,18 +42,23 @@
       /*Container for the date arrows and the student feedback*/
       .arrow-feedback-container {
         display: flex;
-        position: relative;
         align-items: center;
+        justify-content: space-between;
         margin-bottom: 15px;
+        gap: 15px;
+      }
+
+      .search-bar {
+        padding: 8px 10px;
+        width: 165px;
       }
 
       .feedback-button {
-        position: absolute;
-        right: 0;
         color: black;
         border: black solid 1.5px;
         border-radius: 5px;
         padding: 8px 10px;
+        width: 165px;
         cursor: pointer;
       }
 
@@ -314,7 +319,11 @@
       function App() {
         const [tutors, setTutors] = useState(currentTutors);
         const [currentDate, setCurrentDate] = useState(new Date());
+<<<<<<< HEAD
+        const [search, setSearch] = useState("");
+=======
         const [cancelMode, setCancelMode] = useState(null);
+>>>>>>> 182cffe4385df4255263458b27b695f7e9b00fab
 
         const changeSection = (id, newStatus) => {
           setTutors((prev) =>
@@ -345,8 +354,14 @@
         // html is here
         return (
           <div>
-            {/*Date arrow navigation to go to past or future tutoring dates*/}
             <div className="arrow-feedback-container">
+              {/*Searching the courses or tutor*/}
+              <input
+                type="text"
+                placeholder="Search course or tutor"
+                value={search}
+                onChange={(e) => setSearch(e.target.value)} className="search-bar"/>
+              {/*Date arrow navigation to go to past or future tutoring dates*/}
               <div className="date-button">
                 <button className="arrow-button" onClick={() => changeDate(-1)}>
                   &larr;
