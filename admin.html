@@ -256,10 +256,74 @@
         completed: "Completed",
       };
 
+    // Confirmation box that appears when cancelling a shift
+      function CancelMode({ tutor, onConfirm, onClose }) {
+        const [mode, setMode] = useState(null);
+        const [selectedDays, setSelectedDays] = useState([]);
+
+        const toggleDay = (day) => {
+          setSelectedDays((prev) =>
+            prev.includes(day) ? prev.filter((d) => d !== day) : [...prev, day]
+          );
+        };
+
+        const handleConfirm = () => {
+          if (!mode) return;
+          onConfirm(mode, selectedDays);
+        };
+
+        return (
+          <div className="modal-overlay" onClick={onClose}>
+            <div className="modal-box" onClick={(e) => e.stopPropagation()}>
+              <h2>Cancel shift for {tutor.name}?</h2>
+              <p>Please confirm how many shifts belonging to this tutor to cancel</p>
+
+              <button
+                className={`mode-option ${mode === 'single' ? 'selected' : ''}`}
+                onClick={() => setMode('single')}
+              >
+                This shift only
+              </button>
+
+              <button
+                className={`modal-option ${mode === 'today' ? 'selected' : ''}`}
+                onClick={() => setMode('today')}
+              >
+                All shifts today
+              </button>
+
+              <button
+                className={`modal-option ${mode === 'multiday' ? 'selected' : ''}`}
+                onClick={() => setMode('multiday')}
+              >
+                Multiple days
+              </button>
+
+              {/* {mode === 'multiday' && (here is where the calener popup would be)} */} 
+
+              <div className="modal-buttons">
+                <button className="btn-cancel-modal" onClick={onClose}>Go back</button>
+                <button
+                  className="btn-confirm"
+                  onClick={handleConfirm}
+                  disabled={!mode || (mode === 'multiday' && selectedDays.length === 0)}
+                >
+                  Confirm cancellation
+                </button>
+              </div>
+            </div>
+          </div>
+        );
+      }
+
       function App() {
         const [tutors, setTutors] = useState(currentTutors);
         const [currentDate, setCurrentDate] = useState(new Date());
+<<<<<<< HEAD
         const [search, setSearch] = useState("");
+=======
+        const [cancelMode, setCancelMode] = useState(null);
+>>>>>>> 182cffe4385df4255263458b27b695f7e9b00fab
 
         const changeSection = (id, newStatus) => {
           setTutors((prev) =>
@@ -316,7 +380,8 @@
               </div>
 
               {/*Accessing feedback button*/}
-              <button className="feedback-button">Access Feedback</button>
+              <button className="feedback-button" onClick={() => window.open('https://docs.google.com/spreadsheets/d/1zE-2hPtF0hfRsJfjtSxjRZRZ1DW-OaPZ6_9hUCb7ZTQ/edit?usp=sharing', '_blank')}>
+                Access Feedback</button>
             </div>
 
             {SECTIONS.map((sec) => {
