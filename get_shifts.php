@@ -30,7 +30,7 @@ $result = mysqli_query($db, $query);
 $shifts_array = [];
 
 while ($row = mysqli_fetch_assoc($result)) {
-  $shifts_array[] = $row;
+    $shifts_array[] = $row;
 }
 
 echo json_encode(["success" => true, "shifts" => $shifts_array]);
