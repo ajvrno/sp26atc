@@ -272,11 +272,39 @@ if (mysqli_connect_errno()) {
     // Confirmation box that appears when cancelling a shift
     function CancelMode({ tutor, onConfirm, onClose }) {
       const [mode, setMode] = useState(null);
-      const [selectedDays, setSelectedDays] = useState([]);
+      const [startDate, setStartDate] = useState('');
+      const [endDate, setEndDate] = useState('');
 
       const handleConfirm = () => {
         if (!mode) return;
-        onConfirm(mode, selectedDays);
+
+        // generates the array of dates for multiselect
+        if (mode === 'multiday') {
+          if (!startDate || !endDate) {
+            alert("Please select both a start and end date.");
+            return;
+          }
+          if (startDate > endDate) {
+            alert("Start date must be before end date.");
+            return;
+          }
+
+          let dates = [];
+          let curr = new Date(startDate);
+          let end = new Date(endDate);
+
+          // Adjust for timezone offsets so dates don't accidentally shift backwards
+          curr.setMinutes(curr.getMinutes() + curr.getTimezoneOffset());
+          end.setMinutes(end.getMinutes() + end.getTimezoneOffset());
+
+          while (curr <= end) {
+            dates.push(curr.toISOString().split('T')[0]);
+            curr.setDate(curr.getDate() + 1);
+          }
+          onConfirm(mode, dates);
+        } else {
+          onConfirm(mode, []); // single or today modes don't need the date array
+        }
       };
 
       return (
@@ -308,11 +336,21 @@ if (mysqli_connect_errno()) {
               </button>
             </div>
 
+            {/* NEW: The Date Range Pickers! */}
+            {mode === 'multiday' && (
+              <div style={{ textAlign: 'center', marginBottom: '20px' }}>
+                <label><b>Start Date:</b> <input type="date" value={startDate} onChange={(e) => setStartDate(e.target.value)} style={{ marginLeft: '5px', padding: '3px' }} /></label>
+                <br /><br />
+                <label><b>End Date:</b> <input type="date" value={endDate} onChange={(e) => setEndDate(e.target.value)} style={{ marginLeft: '11px', padding: '3px' }} /></label>
+              </div>
+            )}
+
             <div className="confirm-buttons">
-              <button onClick={onClose}>Go back</button>
+              <button onClick={onClose} style={{ padding: '5px 10px', cursor: 'pointer' }}>Go back</button>
               <button
                 onClick={handleConfirm}
-                disabled={!mode || (mode === 'multiday' && selectedDays.length === 0)}
+                disabled={!mode}
+                style={{ padding: '5px 10px', cursor: 'pointer', backgroundColor: mode ? '#da7877' : '#ccc', color: mode ? 'white' : 'black', border: 'none', borderRadius: '3px' }}
               >
                 Confirm cancellation
               </button>
@@ -363,12 +401,16 @@ if (mysqli_connect_errno()) {
         loadSchedule();
       }, [currentDate]);
 
-      const sendStatusUpdate = (shiftId, newStatus) => {
-        setTutors((prev) =>
-          prev.map((t) =>
-            t.id === shiftId ? { ...t, section: statusToSection[newStatus] } : t,
-          ),
-        );
+      const sendStatusUpdate = (shiftId, newStatus, targetDate = null) => {
+        const updateDate = targetDate || getFormattedDate(currentDate);
+
+        if (updateDate === getFormattedDate(currentDate)) {
+          setTutors((prev) =>
+            prev.map((t) =>
+              t.id === shiftId ? { ...t, section: statusToSection[newStatus] } : t,
+            ),
+          );
+        }
 
         fetch('update_status.php', {
           method: 'POST',
@@ -376,12 +418,13 @@ if (mysqli_connect_errno()) {
           body: JSON.stringify({
             shift_id: shiftId,
             new_status: newStatus,
-            date: getFormattedDate(currentDate)
+            date: updateDate
           })
         })
           .then(response => response.json())
           .then(data => {
-            if (!data.success) {
+            // throw an alert if it failed on the current day
+            if (!data.success && updateDate === getFormattedDate(currentDate)) {
               alert("Database Error: " + data.message);
               loadSchedule();
             }
@@ -397,7 +440,7 @@ if (mysqli_connect_errno()) {
         }
       };
 
-      const handleCancelConfirm = (mode, selectedDays) => {
+      const handleCancelConfirm = (mode, selectedDates) => {
         const { tutor } = cancelMode;
         setCancelMode(null);
 
@@ -407,6 +450,13 @@ if (mysqli_connect_errno()) {
         else if (mode === 'today') {
           const tutorsDayShifts = tutors.filter((t) => t.name === tutor.name);
           tutorsDayShifts.forEach((t) => sendStatusUpdate(t.id, 'Cancelled'));
+        }
+        else if (mode === 'multiday') {
+          selectedDates.forEach(dateStr => {
+            sendStatusUpdate(tutor.id, 'Cancelled', dateStr);
+          });
+
+          alert(`Cancellation requests sent! Note: Cancellations will only apply to future dates that have already been generated in the database.`);
         }
       };
 
