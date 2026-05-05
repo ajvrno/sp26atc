@@ -8,20 +8,29 @@ header('Content-Type: application/json');
 // Check if React sent a specific date via the URL. If not, default to today.
 $target_date = isset($_GET['date']) ? $_GET['date'] : date('Y-m-d');
 
-// Automatically updates any 'Upcoming' shifts to 'Late' if the current 
-// time is 15 minutes past their start time, OR if the shift was yesterday
+// Automatically updates any 'Upcoming' shifts to 'Late' if the current time is 15 mins past their start time
 $auto_late_query = "
     UPDATE status st
     JOIN shift s ON st.shift_id = s.shift_id
     SET st.status_state = 'Late'
     WHERE st.status_state = 'Upcoming' 
-      AND (
-          st.`date` < CURRENT_DATE() OR 
-          (st.`date` = CURRENT_DATE() AND CURRENT_TIME() > ADDTIME(s.start_time, '00:15:00'))
+      AND (st.`date` = CURRENT_DATE() AND CURRENT_TIME() > ADDTIME(s.start_time, '00:15:00')
       )
 ";
 
 mysqli_query($db, $auto_late_query);
+
+// Query to automatically mark 'Active' shifts as 'Completed' if the current time is 1 min past their end time
+$auto_complete_query = "
+    UPDATE status st
+    JOIN shift s ON st.shift_id = s.shift_id
+    SET st.status_state = 'Completed'
+    WHERE st.status_state = 'Active' 
+      AND (st.`date` = CURRENT_DATE() AND CURRENT_TIME() > ADDTIME(s.end_time, '00:01:00')
+      )
+";
+
+mysqli_query($db, $auto_complete_query);
 
 // Query to grab the shift details, the tutor's name, the course, and the current status
 $query = "

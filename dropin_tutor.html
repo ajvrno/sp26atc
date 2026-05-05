@@ -1,6 +1,36 @@
 <html lang="en-US" class="js-focus-visible" data-js-focus-visible="">
   <head>
     <meta charset="UTF-8" />
+    <style>
+      .tutor-session {
+        padding: 3px 8px;
+        border-radius: 5px;
+        display: inline-block;
+        margin-bottom: 4px;
+        color: black !important;
+        font-weight: 500;
+        transition: background-color 0.3s ease;
+      }
+
+      .tutor-session[data-status="late" i] {
+        background-color: #ffd580;
+      }
+      .tutor-session[data-status="active" i] {
+        background-color: #90ee90;
+      }
+      .tutor-session[data-status="upcoming" i] {
+        background-color: #9f9797;
+        color: white !important;
+      }
+      .tutor-session[data-status="cancelled" i] {
+        background-color: #da7877;
+        color: white !important;
+        text-decoration: line-through;
+      }
+      .tutor-session[data-status="completed" i] {
+        background-color: violet;
+      }
+    </style>
     <script
       type="text/javascript"
       async=""
@@ -6465,17 +6495,25 @@
                   >tutoring@umbc.edu</span
                 ></a
               >.
+            </p>
+
             <p>&nbsp;</p>
             <strong>
               <!-- THIS NEEDS TO BE CHANGED TO A UMBC AUTHORIZED LINK -->
-              Any feedback for this webpage would be greatly appreciated, and can be left 
-              <a href="https://docs.google.com/forms/d/e/1FAIpQLScR9gfDHWzQX6tX5XzCByF0s2amORvjnacELPcU1De1Nxv1lg/viewform?usp=dialog"
-                >here
-              </a>.
+              Any feedback for this webpage would be greatly appreciated, and
+              can be left
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLScR9gfDHWzQX6tX5XzCByF0s2amORvjnacELPcU1De1Nxv1lg/viewform?usp=dialog"
+                >here </a
+              >.
             </strong>
 
-            <img src="data/ColorLegend.png" alt="Color Status Legend" class="legned-img">
-            
+            <img
+              src="data/ColorLegend.png"
+              alt="Color Status Legend"
+              class="legned-img"
+            />
+
             <p>&nbsp;</p>
             <h2>Available Courses</h2>
             <ul class="list-inline" aria-label="Available courses navigation">
@@ -6543,7 +6581,10 @@
                 aria-labelledby="sights-expander-header-86994"
               >
                 <div class="mceEditable">
-                  <div class="tutor-sessions-container" data-course="BIOL 101"></div>
+                  <div
+                    class="tutor-sessions-container"
+                    data-course="BIOL 101"
+                  ></div>
                 </div>
               </div>
             </div>
@@ -6569,7 +6610,10 @@
                 aria-labelledby="sights-expander-header-60124"
               >
                 <div class="mceEditable">
-                  <div class="tutor-sessions-container" data-course="BIOL 140"></div>
+                  <div
+                    class="tutor-sessions-container"
+                    data-course="BIOL 140"
+                  ></div>
                 </div>
               </div>
             </div>
@@ -6597,7 +6641,10 @@
                   aria-labelledby="sights-expander-header-65928"
                 >
                   <div class="mceEditable">
-                  <div class="tutor-sessions-container" data-course="BIOL 141"></div>
+                    <div
+                      class="tutor-sessions-container"
+                      data-course="BIOL 141"
+                    ></div>
                   </div>
                 </div>
               </div>
@@ -6623,7 +6670,10 @@
                   aria-labelledby="sights-expander-header-10349"
                 >
                   <div class="mceEditable">
-                  <div class="tutor-sessions-container" data-course="BIOL 251"></div>
+                    <div
+                      class="tutor-sessions-container"
+                      data-course="BIOL 251"
+                    ></div>
                   </div>
                 </div>
               </div>
@@ -6649,7 +6699,10 @@
                   aria-labelledby="sights-expander-header-30714"
                 >
                   <div class="mceEditable">
-                  <div class="tutor-sessions-container" data-course="BIOL 273"></div>
+                    <div
+                      class="tutor-sessions-container"
+                      data-course="BIOL 273"
+                    ></div>
                   </div>
                 </div>
               </div>
@@ -6675,7 +6728,10 @@
                   aria-labelledby="sights-expander-header-97025"
                 >
                   <div class="mceEditable">
-                  <div class="tutor-sessions-container" data-course="BIOL 302"></div>
+                    <div
+                      class="tutor-sessions-container"
+                      data-course="BIOL 302"
+                    ></div>
                   </div>
                 </div>
               </div>
@@ -6700,7 +6756,10 @@
                     aria-labelledby="sights-expander-header-77022"
                   >
                     <div class="mceEditable">
-                  <div class="tutor-sessions-container" data-course="BIOL 303"></div>
+                      <div
+                        class="tutor-sessions-container"
+                        data-course="BIOL 303"
+                      ></div>
                     </div>
                   </div>
                 </div>
@@ -6726,7 +6785,10 @@
                     aria-labelledby="sights-expander-header-71478"
                   >
                     <div class="mceEditable">
-                  <div class="tutor-sessions-container" data-course="BIOL 430"></div>
+                      <div
+                        class="tutor-sessions-container"
+                        data-course="BIOL 430"
+                      ></div>
                     </div>
                   </div>
                 </div>
@@ -10354,131 +10416,168 @@
       class="visually-hidden"
     ></div>
 
-    <script>
-      
-    </script>
+    <script></script>
 
     <style>
       /* stylesheet for status colors for shifts */
-      .tutor-session[data-status="late"]  {color:#ffff00}
-      .tutor-session[data-status="active"]  {color:#008000}
-      .tutor-session[data-status="upcoming"]  {color:#000000}
-      .tutor-session[data-status="cancelled"]  {color:#ff0000; text-decoration: line-through;}
-      .tutor-session[data-status="completed"]  {color:#ff00ff}
+      .tutor-session[data-status="late"] {
+        color: #ffff00;
+      }
+      .tutor-session[data-status="active"] {
+        color: #008000;
+      }
+      .tutor-session[data-status="upcoming"] {
+        color: #000000;
+      }
+      .tutor-session[data-status="cancelled"] {
+        color: #ff0000;
+        text-decoration: line-through;
+      }
+      .tutor-session[data-status="completed"] {
+        color: #ff00ff;
+      }
     </style>
 
     <script>
-    console.log('script loaded');
-    (function () {
-      const SCHEDULE_API = 'get_sched.php';
+      console.log("script loaded");
+      (function () {
+        const SCHEDULE_API = "get_sched.php";
 
-      const STATUS_COLORS = {
-        late: '#ffff00',
-        active: '#008000',
-        upcoming: '#000000',
-        cancelled: '#ff0000',
-        completed: '#ff00ff',
-      };
+        const STATUS_COLORS = {
+          late: "#ffff00",
+          active: "#008000",
+          upcoming: "#000000",
+          cancelled: "#ff0000",
+          completed: "#ff00ff",
+        };
 
-      // loads the structure from the available shifts in the database
-      async function loadShifts() {
-        console.log('Loading shifts');
-        let shifts;
-        try {
-          const res = await fetch('get_shifts.php');
-          const json = await res.json();
-          console.log(json);
-          if (!json.success) return;
-          shifts = json.shifts;
-        } catch (e) {
-          // default if error
-          console.log('Error caught' + e);
-          return;
-        }
-
-        const DAY_ORDER = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'];
-
-        // subject, course_code, day, sessions
-        const grouped = {};
-        for (const s of shifts) {
-          grouped[s.subject] ??= {};
-          grouped[s.subject][s.course_code] ??= {title: s.course_title, days: {}};
-          grouped[s.subject][s.course_code].days[s.day] ??= [];
-          grouped[s.subject][s.course_code].days[s.day].push(s);
-        }
-
-        // inject sessions into course containers
-        for (const [subject, courses] of Object.entries(grouped)) {
-          for (const [code, course] of  Object.entries(courses)) {
-            const cid = code.replace(/\s/g, '').toLowerCase();
-            const container = document.querySelector(`[data-course="${code}"]`);
-            if (!container) continue;
-
-            let html = `<p><strong>Tutors for ${code} are available on the following days and times:</strong></p>`;
-
-            for (const day of DAY_ORDER) {
-              if (!course.days[day]) continue;
-              html += `<p><strong>${day}</strong><br />`;
-              html += course.days[day].map(s =>
-              `<span class="tutor-session" data-shift-id="${s.id}" data-status="upcoming">` +
-              `${s.start} – ${s.end} – ${s.name}</span>`).join('<br />\n');
-              html += `</p>`;
-            }
-
-            container.innerHTML = html;
+        // loads the structure from the available shifts in the database
+        async function loadShifts() {
+          console.log("Loading shifts");
+          let shifts;
+          try {
+            const res = await fetch("get_shifts.php");
+            const json = await res.json();
+            console.log(json);
+            if (!json.success) return;
+            shifts = json.shifts;
+          } catch (e) {
+            // default if error
+            console.log("Error caught" + e);
+            return;
           }
-        }
 
-        // after loading structure, load the actual schedules
-        getSessionStatus();
-      }
+          const DAY_ORDER = [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+          ];
 
-      // get the status of each session and load into the webpage
-      async function getSessionStatus() {
-        let tutors;
-        try {
-          const res = await fetch(SCHEDULE_API);
-          const json = await res.json();
-          if (!json.success) return; // just skip if php failed
-          tutors = json.tutors;      // id, name, start, end, course, section
-        } catch (e) {
-          return;
-        }
+          // subject, course_code, day, sessions
+          const grouped = {};
+          for (const s of shifts) {
+            grouped[s.subject] ??= {};
+            grouped[s.subject][s.course_code] ??= {
+              title: s.course_title,
+              days: {},
+            };
+            grouped[s.subject][s.course_code].days[s.day] ??= [];
+            grouped[s.subject][s.course_code].days[s.day].push(s);
+          }
 
-        // build look up of shift_id and status
-        const shiftStatuses = {};
-        for (const t of tutors) {
-          shiftStatuses[t.id] = (t.section || 'upcoming').toLowerCase();
-        }
+          // inject sessions into course containers
+          for (const [subject, courses] of Object.entries(grouped)) {
+            for (const [code, course] of Object.entries(courses)) {
+              const cid = code.replace(/\s/g, "").toLowerCase();
+              const container = document.querySelector(
+                `[data-course="${code}"]`,
+              );
+              if (!container) continue;
 
-        // change status of each span on page
-        document.querySelectorAll('.tutor-session[data-shift-id]').forEach(el => {
-          const shiftId = el.dataset.shiftId;
-          const status = shiftStatuses[shiftId];
-          if (status) {
-            el.dataset.status = status;
-            const badge = el.querySelector('.status-badge');
-            const label = status.charAt(0).toUpperCase() + status.slice(1);
-            if (badge) {
-              badge.textContent = label;
-            } else {
-              const b = document.createElement('em');
-              b.className = 'status-badge';
-              b.style.cssText = 'font-size:0.8em; margin-left:6px; opacity:0.85;';
-              b.textContent = '(' + label + ')';
-              el.appendChild(b);
+              let html = `<p><strong>Tutors for ${code} are available on the following days and times:</strong></p>`;
+
+              for (const day of DAY_ORDER) {
+                if (!course.days[day]) continue;
+                html += `<p><strong>${day}</strong><br />`;
+                html += course.days[day]
+                  .map(
+                    (s) =>
+                      `<span class="tutor-session" data-shift-id="${s.id}" data-status="upcoming">` +
+                      `${s.start} – ${s.end} – ${s.name}</span>`,
+                  )
+                  .join("<br />\n");
+                html += `</p>`;
+              }
+
+              container.innerHTML = html;
             }
           }
+
+          // after loading structure, load the actual schedules
+          getSessionStatus();
+        }
+
+        // get the status of each session and load into the webpage
+        async function getSessionStatus() {
+          let tutors;
+          try {
+            const res = await fetch(
+              SCHEDULE_API + "?nocache=" + new Date().getTime(),
+            );
+            const json = await res.json();
+            if (!json.success) return; // just skip if php failed
+            tutors = json.tutors;
+          } catch (e) {
+            return;
+          }
+
+          // build look up of shift_id and status
+          const shiftStatuses = {};
+          for (const t of tutors) {
+            shiftStatuses[t.id] = (t.section || "upcoming").toLowerCase();
+          }
+
+          // change status of each span on page
+          document
+            .querySelectorAll(".tutor-session[data-shift-id]")
+            .forEach((el) => {
+              const shiftId = el.dataset.shiftId;
+              const status = shiftStatuses[shiftId];
+
+              if (status) {
+                el.dataset.status = status;
+
+                if (STATUS_COLORS[status]) {
+                  el.style.color = STATUS_COLORS[status];
+                  if (status !== "upcoming") el.style.fontWeight = "bold";
+                }
+
+                const badge = el.querySelector(".status-badge");
+                const label = status.charAt(0).toUpperCase() + status.slice(1);
+
+                if (badge) {
+                  badge.textContent = label;
+                } else {
+                  const b = document.createElement("em");
+                  b.className = "status-badge";
+                  b.style.cssText =
+                    "font-size:0.8em; margin-left:6px; opacity:0.85;";
+                  b.textContent = "(" + label + ")";
+                  el.appendChild(b);
+                }
+              }
+            });
+        }
+
+        // run on page load and refresh status every 60 seconds
+        document.addEventListener("DOMContentLoaded", function () {
+          console.log("DOM ready");
+          loadShifts();
+          setInterval(getSessionStatus, 60000);
         });
-      }
-
-      // run on page load and refresh status every 60 seconds
-      document.addEventListener('DOMContentLoaded', function () {
-        console.log('DOM ready');
-        loadShifts();
-        setInterval(getSessionStatus, 60000);
-      });
-    })();
+      })();
     </script>
   </body>
 </html>

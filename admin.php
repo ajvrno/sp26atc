@@ -3,11 +3,10 @@
 // Checks if the user is logged in before opening admin page
 session_start();
 
-// if (!isset($_SESSION['admin_id'])) {
-
-//   header("Location: login.php");
-//   exit();
-// }
+if (!isset($_SESSION['admin_id'])) {
+  header("Location: login.php");
+  exit();
+}
 
 require_once 'db_config.php';
 
@@ -56,19 +55,17 @@ if (mysqli_connect_errno()) {
 
     .arrow-feedback-container {
       display: flex;
-      position: relative;
       align-items: center;
+      justify-content: space-between;
       margin-bottom: 15px;
+      gap: 15px;
     }
 
-    .feedback-button {
-      position: absolute;
-      right: 0;
-      color: black;
-      border: black solid 1.5px;
-      border-radius: 5px;
+    .search-bar {
       padding: 8px 10px;
-      cursor: pointer;
+      width: 165px;
+      border: 1.5px solid black;
+      border-radius: 5px;
     }
 
     .date-button {
@@ -79,6 +76,21 @@ if (mysqli_connect_errno()) {
     }
 
     .arrow-button {
+      cursor: pointer;
+    }
+
+    /* Container for the right-side buttons */
+    .right-buttons {
+      display: flex;
+      gap: 10px;
+    }
+
+    .action-button {
+      color: black;
+      background-color: white;
+      border: black solid 1.5px;
+      border-radius: 5px;
+      padding: 8px 10px;
       cursor: pointer;
     }
 
@@ -157,7 +169,7 @@ if (mysqli_connect_errno()) {
       background-color: #cbc3e3;
       padding: 4px;
     }
-    
+
     /* Cancellation confirmation box css */
     .cancel-overlay {
       position: fixed;
@@ -175,7 +187,7 @@ if (mysqli_connect_errno()) {
       padding: 28px 32px;
       width: 450px;
       max-width: 90%;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
     }
 
     .cancel-box h2 {
@@ -194,7 +206,7 @@ if (mysqli_connect_errno()) {
       margin-top: 24px;
       margin-bottom: 30px;
     }
-    
+
     .mode-option.selected {
       background: darkgray;
     }
@@ -233,7 +245,7 @@ if (mysqli_connect_errno()) {
 
     const STATUS_OPTIONS = {
       late: ["Late", "Active", "Cancelled"],
-      active: ["Active", "Cancelled"],
+      active: ["Active", "Cancelled", "Completed"],
       upcoming: ["Upcoming", "Active", "Late", "Cancelled"],
       cancelled: ["Cancelled", "Active"],
       completed: [],
@@ -261,12 +273,6 @@ if (mysqli_connect_errno()) {
     function CancelMode({ tutor, onConfirm, onClose }) {
       const [mode, setMode] = useState(null);
       const [selectedDays, setSelectedDays] = useState([]);
-
-      const toggleDay = (day) => {
-        setSelectedDays((prev) =>
-          prev.includes(day) ? prev.filter((d) => d !== day) : [...prev, day]
-        );
-      };
 
       const handleConfirm = () => {
         if (!mode) return;
@@ -301,7 +307,6 @@ if (mysqli_connect_errno()) {
                 Multiple days
               </button>
             </div>
-            {/* {mode === 'multiday' && (here is where the calener popup would be)} */} 
 
             <div className="confirm-buttons">
               <button onClick={onClose}>Go back</button>
@@ -318,28 +323,26 @@ if (mysqli_connect_errno()) {
     }
 
     function App() {
-      // Start with an empty array instead of dummy data
       const [tutors, setTutors] = useState([]);
       const [currentDate, setCurrentDate] = useState(new Date());
       const [cancelMode, setCancelMode] = useState(null);
+      // Search State from HTML file
+      const [search, setSearch] = useState("");
 
-      // Helper to format the React date into MySQL format (YYYY-MM-DD)
       const getFormattedDate = (date) => {
         const offset = date.getTimezoneOffset()
         const dateLocal = new Date(date.getTime() - (offset * 60 * 1000))
         return dateLocal.toISOString().split('T')[0];
       };
 
-      // Fetch the schedule from the database (WITH SUPER DEBUGGING)
       const loadSchedule = () => {
         const formattedDate = getFormattedDate(currentDate);
 
         fetch('get_sched.php?date=' + formattedDate)
           .then(async (response) => {
-            const rawText = await response.text(); // Grab the raw output first
-
+            const rawText = await response.text();
             try {
-              const data = JSON.parse(rawText); // Try to turn it into JSON
+              const data = JSON.parse(rawText);
               if (data.success) {
                 setTutors(data.tutors);
               } else {
@@ -356,7 +359,6 @@ if (mysqli_connect_errno()) {
           });
       };
 
-      // Re-run the fetch automatically whenever 'currentDate' changes!
       useEffect(() => {
         loadSchedule();
       }, [currentDate]);
@@ -364,7 +366,7 @@ if (mysqli_connect_errno()) {
       const sendStatusUpdate = (shiftId, newStatus) => {
         setTutors((prev) =>
           prev.map((t) =>
-            t.id === id ? { ...t, section: statusToSection[newStatus] } : t,
+            t.id === shiftId ? { ...t, section: statusToSection[newStatus] } : t,
           ),
         );
 
@@ -372,7 +374,7 @@ if (mysqli_connect_errno()) {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
-            shift_id: id,
+            shift_id: shiftId,
             new_status: newStatus,
             date: getFormattedDate(currentDate)
           })
@@ -381,37 +383,30 @@ if (mysqli_connect_errno()) {
           .then(data => {
             if (!data.success) {
               alert("Database Error: " + data.message);
-              loadSchedule(); // Revert screen if database fails
+              loadSchedule();
             }
           });
       };
 
-      // Handle database updates when an admin changes the status dropdown
       const changeSection = (id, newStatus) => {
         if (newStatus === 'Cancelled') {
           const tutor = tutors.find((t) => t.id === id);
-          setCancelMode({tutor});
+          setCancelMode({ tutor });
         } else {
           sendStatusUpdate(id, newStatus);
         }
       };
 
       const handleCancelConfirm = (mode, selectedDays) => {
-        const {tutor} = cancelMode;
+        const { tutor } = cancelMode;
         setCancelMode(null);
 
         if (mode === 'single') {
-          // just this one
           sendStatusUpdate(tutor.id, 'Cancelled');
         }
         else if (mode === 'today') {
-          // cancel all shifts today
           const tutorsDayShifts = tutors.filter((t) => t.name === tutor.name);
           tutorsDayShifts.forEach((t) => sendStatusUpdate(t.id, 'Cancelled'));
-        }
-        else if (mode === 'multiday') {
-          // pick a range and cancel all shifts on those days
-          // right now do nothing but maybe bring up a calender and find the days and copy "today" section with each day
         }
       };
 
@@ -431,21 +426,22 @@ if (mysqli_connect_errno()) {
         <div>
           {cancelMode && (
             <CancelMode
-            tutor = {cancelMode.tutor}
-            onConfirm={handleCancelConfirm}
-            onClose={() => setCancelMode(null)}
+              tutor={cancelMode.tutor}
+              onConfirm={handleCancelConfirm}
+              onClose={() => setCancelMode(null)}
             />
           )}
 
           <div className="arrow-feedback-container">
-            <div>
-              <button
-                onClick={() => window.location.href = 'logout.php'}
-                style={{ float: 'right', padding: '5px 10px', cursor: 'pointer' }}
-              >
-                Logout
-              </button>
-            </div>
+            {/* SEARCH BAR IMPLEMENTATION */}
+            <input
+              type="text"
+              placeholder="Search course or tutor"
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+              className="search-bar"
+            />
+
             <div className="date-button">
               <button className="arrow-button" onClick={() => changeDate(-1)}>
                 &larr;
@@ -456,7 +452,6 @@ if (mysqli_connect_errno()) {
                 value={getFormattedDate(currentDate)}
                 onChange={(e) => {
                   const selected = new Date(e.target.value);
-                  // Add timezone offset back so the day doesn't jump backwards
                   selected.setMinutes(selected.getMinutes() + selected.getTimezoneOffset());
                   setCurrentDate(selected);
                 }}
@@ -467,13 +462,29 @@ if (mysqli_connect_errno()) {
               </button>
             </div>
 
-              {/*Accessing feedback button*/}
-              <button className="feedback-button" onClick={() => window.open('https://docs.google.com/spreadsheets/d/1zE-2hPtF0hfRsJfjtSxjRZRZ1DW-OaPZ6_9hUCb7ZTQ/edit?usp=sharing', '_blank')}>
-                Access Feedback</button>
+            <div className="right-buttons">
+              <button className="action-button" onClick={() => window.open('https://docs.google.com/spreadsheets/d/1zE-2hPtF0hfRsJfjtSxjRZRZ1DW-OaPZ6_9hUCb7ZTQ/edit?usp=sharing', '_blank')}>
+                Access Feedback
+              </button>
+              <button className="action-button" onClick={() => window.location.href = 'logout.php'}>
+                Logout
+              </button>
             </div>
+          </div>
 
           {SECTIONS.map((sec) => {
-            const rows = tutors.filter((t) => t.section === sec);
+            // Filters the schedule both by section category and the search bar text
+            const rows = tutors.filter((t) => {
+              if (t.section !== sec) return false;
+              if (search.trim() === "") return true;
+
+              const searchTerm = search.toLowerCase();
+              return (
+                t.name.toLowerCase().includes(searchTerm) ||
+                (t.course && t.course.toLowerCase().includes(searchTerm))
+              );
+            });
+
             const opts = STATUS_OPTIONS[sec];
             const isActive = sec === "active";
             const isCompleted = sec === "completed";
