@@ -21,14 +21,17 @@ $auto_late_query = "
 mysqli_query($db, $auto_late_query);
 
 // Query to automatically mark shifts as 'Completed' if the current time is 1 min past their end time
-/**$auto_complete_query = "
+$auto_complete_query = "
     UPDATE status st
     JOIN shift s ON st.shift_id = s.shift_id
     SET st.status_state = 'Completed'
-    WHERE s.end_time < CURRENT_TIME() AND st.status_state IN ('Active', 'Late')
+    WHERE st.status_state IN ('Active', 'Late') 
+      AND (
+          st.`date` < CURRENT_DATE() OR 
+          (st.`date` = CURRENT_DATE() AND CURRENT_TIME() >= s.end_time)
+      )
 ";
-
-mysqli_query($db, $auto_complete_query);**/
+mysqli_query($db, $auto_complete_query);
 
 // Query to grab the shift details, the tutor's name, the course, and the current status
 $query = "
