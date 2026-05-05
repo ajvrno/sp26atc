@@ -135,7 +135,7 @@ if (mysqli_connect_errno()) {
     }
 
     .completed {
-      background-color: violet;
+      background-color: #ff00ff;
     }
 
     h1 {
@@ -166,7 +166,7 @@ if (mysqli_connect_errno()) {
     }
 
     .status-open {
-      background-color: #cbc3e3;
+      background-color: #c3e3c4;
       padding: 4px;
     }
 
@@ -244,7 +244,7 @@ if (mysqli_connect_errno()) {
     };
 
     const STATUS_OPTIONS = {
-      late: ["Late", "Active", "Cancelled"],
+      late: ["Late", "Active", "Cancelled", "Completed"],
       active: ["Active", "Cancelled", "Completed"],
       upcoming: ["Upcoming", "Active", "Late", "Cancelled"],
       cancelled: ["Cancelled", "Active"],
